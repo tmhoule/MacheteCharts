@@ -100,6 +100,20 @@ html, body {
   transform: scale(0.95);
 }
 
+.text-size-controls button#closePanel {
+  background: transparent;
+  border-color: var(--border);
+  color: var(--text-dim);
+  font-size: 1.1em;
+  line-height: 1;
+}
+
+.text-size-controls button#closePanel:hover {
+  background: #c53030;
+  border-color: #c53030;
+  color: #fff;
+}
+
 .search-wrapper {
   position: relative;
   flex: 1;

@@ -56,6 +56,12 @@ class MacheteChartsPanel extends TemplateElement {
     applyUiScale();
   });
 
+  // ── Close panel button ──
+  document.getElementById('closePanel').addEventListener('click', function () {
+    var panel = document.getElementById('MacheteChartsPanel');
+    if (panel && panel.close) panel.close();
+  });
+
   // ── On-screen keyboard ──
   var osk = document.getElementById('onScreenKeyboard');
   var oskRows = [
