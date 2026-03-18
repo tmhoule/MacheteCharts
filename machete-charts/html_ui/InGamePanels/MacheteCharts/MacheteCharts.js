@@ -56,6 +56,24 @@ class MacheteChartsPanel extends TemplateElement {
     applyUiScale();
   });
 
+  // ── Clear button ──
+  document.getElementById('clearBtn').addEventListener('click', function () {
+    searchInput.value = '';
+    searchResults.classList.remove('visible');
+    osk.classList.remove('visible');
+    state = { view: 'home', airport: null, category: null, plate: null };
+    // Remove any plate viewer overlay
+    var viewer = document.querySelector('.plate-viewer');
+    if (viewer) viewer.remove();
+    contentEl.innerHTML =
+      '<div class="empty-state">' +
+      '<h2>FAA Terminal Procedures</h2>' +
+      '<div class="region">All US airports</div>' +
+      '<p>Enter an airport identifier to view charts.</p>' +
+      '<div class="branding">hermes-tv.com</div>' +
+      '</div>';
+  });
+
   // ── Close panel button ──
   document.getElementById('closePanel').addEventListener('click', function () {
     var panel = document.getElementById('MacheteChartsPanel');
@@ -75,7 +93,7 @@ class MacheteChartsPanel extends TemplateElement {
     oskHtml += '<div class="osk-row">';
     row.forEach(function (key) {
       var cls = (key === 'DEL' || key === 'GO') ? 'osk-key wide' : 'osk-key';
-      var label = key === 'DEL' ? '&larr; Del' : key === 'GO' ? 'Go &rarr;' : key;
+      var label = key === 'DEL' ? 'Del' : key === 'GO' ? 'Go' : key;
       oskHtml += '<button class="' + cls + '" data-key="' + key + '">' + label + '</button>';
     });
     oskHtml += '</div>';
@@ -179,9 +197,9 @@ class MacheteChartsPanel extends TemplateElement {
     }
   });
 
-  // Strip ICAO K-prefix to get FAA identifier (KBOS -> BOS)
+  // Strip ICAO K-prefix to get FAA identifier (KBOS -> BOS, KB -> B)
   function normalizeCode(q) {
-    if (q.length === 4 && q.startsWith('K') && !chartsData[q]) {
+    if (q.startsWith('K') && q.length > 1 && !chartsData[q]) {
       return q.substring(1);
     }
     return q;
@@ -363,7 +381,7 @@ class MacheteChartsPanel extends TemplateElement {
     const catLabels = { diagram: 'Airport Diagram', approach: 'Approaches', departure: 'Departures', star: 'STARs' };
     const plates = airport.plates[cat] || [];
 
-    let html = `<button class="back-btn" id="backToAirport">&larr; ${airport.code}</button>`;
+    let html = `<button class="back-btn" id="backToAirport">&lt; ${airport.code}</button>`;
     html += `<div class="airport-info"><h2>${catLabels[cat]}</h2></div>`;
     html += '<div class="plate-list">';
     plates.forEach((plate, idx) => {
@@ -400,9 +418,9 @@ class MacheteChartsPanel extends TemplateElement {
     viewer.className = 'plate-viewer';
     viewer.innerHTML =
       `<div class="plate-toolbar">` +
-      `<button id="plateBack">&larr; Back</button>` +
+      `<button id="plateBack">&lt; Back</button>` +
       `<span class="title">${escapeHtml(plate.name)}</span>` +
-      `<button id="plateZoomOut">&minus;</button>` +
+      `<button id="plateZoomOut">-</button>` +
       `<button id="plateZoomIn">+</button>` +
       `<button id="plateReset">Fit</button>` +
       `</div>` +

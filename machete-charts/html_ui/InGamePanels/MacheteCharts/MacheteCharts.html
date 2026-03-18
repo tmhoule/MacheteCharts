@@ -25,27 +25,29 @@
           <div class="header-top">
             <h1>Machete Charts</h1>
             <div class="text-size-controls">
-              <button id="textSmaller" title="Smaller text">A&minus;</button>
+              <button id="textSmaller" title="Smaller text">A-</button>
               <button id="textBigger" title="Bigger text">A+</button>
-              <button id="closePanel" title="Close panel">&times;</button>
+              <button id="closePanel" title="Close panel">X</button>
             </div>
           </div>
           <div class="search-wrapper">
             <div class="search-box">
+              <button id="clearBtn" title="Clear">Clr</button>
               <input type="text" id="searchInput" placeholder="Airport ID (e.g. BOS)" maxlength="4" autocomplete="off" spellcheck="false">
               <button id="searchBtn">Search</button>
             </div>
             <div class="search-results" id="searchResults"></div>
           </div>
         </div>
-        <div class="osk" id="onScreenKeyboard"></div>
         <div class="content" id="content">
           <div class="empty-state">
             <h2>FAA Terminal Procedures</h2>
-            <div class="region">All US airports &bull; Cycle 2603</div>
+            <div class="region">All US airports</div>
             <p>Enter an airport identifier to view charts.</p>
+            <div class="branding">hermes-tv.com</div>
           </div>
         </div>
+        <div class="osk" id="onScreenKeyboard"></div>
       </div>
     </ingame-ui>
   </machete-charts-panel>
