@@ -25,10 +25,14 @@ class MacheteChartsPanel extends TemplateElement {
   const searchInput = document.getElementById('searchInput');
   const searchBtn = document.getElementById('searchBtn');
   const searchResults = document.getElementById('searchResults');
+  var highlightIdx = -1;
+  var recentAirports = [];
+  try { var r = JSON.parse(localStorage.getItem('machete_recent')); if (Array.isArray(r)) recentAirports = r; } catch(e) {}
 
   // MSFS Coherent GT: redirect keyboard input to panel when input is focused
   searchInput.addEventListener('focus', function () {
     try { Coherent.trigger('FOCUS_INPUT_FIELD', '', '', '', ''); } catch(e) {}
+    showRecent();
   });
   searchInput.addEventListener('blur', function () {
     try { Coherent.trigger('UNFOCUS_INPUT_FIELD', '', '', '', ''); } catch(e) {}
@@ -44,11 +48,11 @@ class MacheteChartsPanel extends TemplateElement {
   }
   applyUiScale();
   document.getElementById('textBigger').addEventListener('click', function () {
-    uiScale = Math.min(200, uiScale + 15);
+    uiScale = Math.min(300, uiScale + 25);
     applyUiScale();
   });
   document.getElementById('textSmaller').addEventListener('click', function () {
-    uiScale = Math.max(60, uiScale - 15);
+    uiScale = Math.max(60, uiScale - 25);
     applyUiScale();
   });
 
@@ -58,14 +62,14 @@ class MacheteChartsPanel extends TemplateElement {
     ['1','2','3','4','5','6','7','8','9','0'],
     ['Q','W','E','R','T','Y','U','I','O','P'],
     ['A','S','D','F','G','H','J','K','L'],
-    ['Z','X','C','V','B','N','M','DEL']
+    ['Z','X','C','V','B','N','M','DEL','GO']
   ];
   var oskHtml = '';
   oskRows.forEach(function (row) {
     oskHtml += '<div class="osk-row">';
     row.forEach(function (key) {
-      var cls = key === 'DEL' ? 'osk-key wide' : 'osk-key';
-      var label = key === 'DEL' ? '&larr; Del' : key;
+      var cls = (key === 'DEL' || key === 'GO') ? 'osk-key wide' : 'osk-key';
+      var label = key === 'DEL' ? '&larr; Del' : key === 'GO' ? 'Go &rarr;' : key;
       oskHtml += '<button class="' + cls + '" data-key="' + key + '">' + label + '</button>';
     });
     oskHtml += '</div>';
@@ -90,7 +94,10 @@ class MacheteChartsPanel extends TemplateElement {
     var btn = e.target.closest('.osk-key');
     if (!btn) return;
     var key = btn.dataset.key;
-    if (key === 'DEL') {
+    if (key === 'GO') {
+      doSearch();
+      return;
+    } else if (key === 'DEL') {
       searchInput.value = searchInput.value.slice(0, -1);
     } else if (searchInput.value.length < 4) {
       searchInput.value += key;
@@ -129,11 +136,35 @@ class MacheteChartsPanel extends TemplateElement {
   // Search input handling
   searchInput.addEventListener('input', onSearchInput);
   searchInput.addEventListener('keydown', function (e) {
-    if (e.key === 'Enter') {
-      doSearch();
+    var items = searchResults.querySelectorAll('.search-result-item');
+    if (e.key === 'ArrowDown') {
+      e.preventDefault();
+      highlightIdx = Math.min(highlightIdx + 1, items.length - 1);
+      updateHighlight(items);
+    } else if (e.key === 'ArrowUp') {
+      e.preventDefault();
+      highlightIdx = Math.max(highlightIdx - 1, -1);
+      updateHighlight(items);
+    } else if (e.key === 'Enter') {
+      if (highlightIdx >= 0 && items[highlightIdx]) {
+        selectAirport(items[highlightIdx].dataset.code);
+        searchResults.classList.remove('visible');
+        osk.classList.remove('visible');
+      } else {
+        doSearch();
+      }
     }
   });
   searchBtn.addEventListener('click', doSearch);
+
+  function updateHighlight(items) {
+    items.forEach(function (el, i) {
+      el.classList.toggle('active', i === highlightIdx);
+    });
+    if (highlightIdx >= 0 && items[highlightIdx]) {
+      items[highlightIdx].scrollIntoView({ block: 'nearest' });
+    }
+  }
 
   // Close dropdown when clicking outside
   document.addEventListener('click', function (e) {
@@ -151,22 +182,34 @@ class MacheteChartsPanel extends TemplateElement {
   }
 
   function onSearchInput() {
+    highlightIdx = -1;
     let q = searchInput.value.trim().toUpperCase();
     if (!chartsData || q.length === 0) {
       searchResults.classList.remove('visible');
+      showRecent();
       return;
     }
 
     const qNorm = normalizeCode(q);
-    const matches = [];
+    const exact = [];
+    const prefix = [];
+    const contains = [];
+    const nameMatch = [];
+
     for (const code in chartsData) {
       const airport = chartsData[code];
-      if (code.startsWith(qNorm) || code.includes(qNorm) ||
-          code.startsWith(q) || airport.name.toUpperCase().includes(q)) {
-        matches.push(airport);
-        if (matches.length >= 15) break;
+      if (code === qNorm || code === q) {
+        exact.push(airport);
+      } else if (code.startsWith(qNorm) || code.startsWith(q)) {
+        prefix.push(airport);
+      } else if (code.includes(qNorm) || code.includes(q)) {
+        contains.push(airport);
+      } else if (airport.name.toUpperCase().includes(q)) {
+        nameMatch.push(airport);
       }
     }
+
+    const matches = exact.concat(prefix, contains, nameMatch).slice(0, 15);
 
     if (matches.length === 0) {
       searchResults.classList.remove('visible');
@@ -225,7 +268,39 @@ class MacheteChartsPanel extends TemplateElement {
     if (!airport) return;
     state = { view: 'airport', airport: code, category: null, plate: null };
     searchInput.value = code;
+    addRecent(code);
     renderAirport(airport);
+  }
+
+  function addRecent(code) {
+    recentAirports = recentAirports.filter(function (c) { return c !== code; });
+    recentAirports.unshift(code);
+    if (recentAirports.length > 5) recentAirports = recentAirports.slice(0, 5);
+    try { localStorage.setItem('machete_recent', JSON.stringify(recentAirports)); } catch(e) {}
+  }
+
+  function showRecent() {
+    if (recentAirports.length === 0 || !chartsData) return;
+    if (searchInput.value.trim().length > 0) return;
+    if (document.activeElement !== searchInput && !osk.classList.contains('visible')) return;
+    var html = '<div class="recent-label">Recent</div>';
+    recentAirports.forEach(function (code) {
+      var airport = chartsData[code];
+      if (!airport) return;
+      html += '<div class="search-result-item" data-code="' + airport.code + '">' +
+        '<span class="result-code">' + airport.code + '</span>' +
+        '<span class="result-name">' + airport.name + '</span>' +
+        '</div>';
+    });
+    searchResults.innerHTML = html;
+    searchResults.classList.add('visible');
+    searchResults.querySelectorAll('.search-result-item').forEach(function (el) {
+      el.addEventListener('click', function () {
+        selectAirport(this.dataset.code);
+        searchResults.classList.remove('visible');
+        osk.classList.remove('visible');
+      });
+    });
   }
 
   function renderAirport(airport) {

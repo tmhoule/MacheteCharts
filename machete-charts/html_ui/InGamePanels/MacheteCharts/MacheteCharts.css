@@ -39,22 +39,22 @@ html, body {
   -webkit-font-smoothing: antialiased;
 }
 
-/* #app fontSize is set by JS (uiScale %). All child font-sizes
-   that use em will scale relative to it. */
-
+/* JS sets #app font-size as a percentage (e.g. 100%, 130%).
+   All child sizes use em so everything scales together. */
 #app {
   display: flex;
   flex-direction: column;
   height: 100%;
   position: relative;
+  font-size: 1em;
 }
 
 /* ── Header ── */
 .header {
   display: flex;
   flex-direction: column;
-  gap: 8px;
-  padding: 12px 14px;
+  gap: 0.44em;
+  padding: 0.67em 0.78em;
   background: var(--surface);
   border-bottom: 1px solid var(--border);
   flex-shrink: 0;
@@ -67,7 +67,7 @@ html, body {
 }
 
 .header h1 {
-  font-size: 15px;
+  font-size: 0.83em;
   font-weight: 700;
   color: var(--accent);
   letter-spacing: 0.04em;
@@ -76,16 +76,16 @@ html, body {
 
 .text-size-controls {
   display: flex;
-  gap: 4px;
+  gap: 0.22em;
 }
 
 .text-size-controls button {
-  padding: 6px 12px;
+  padding: 0.33em 0.67em;
   background: var(--btn-bg);
   border: 1px solid var(--border);
   border-radius: 6px;
   color: var(--text);
-  font-size: 14px;
+  font-size: 0.78em;
   font-weight: 700;
   cursor: pointer;
   transition: background 0.12s;
@@ -114,17 +114,17 @@ html, body {
 .search-box {
   flex: 1;
   display: flex;
-  gap: 6px;
+  gap: 0.33em;
 }
 
 .search-box input {
   flex: 1;
-  padding: 12px 14px;
+  padding: 0.56em 0.67em;
   background: var(--bg);
   border: 1px solid var(--border);
   border-radius: 6px;
   color: var(--text);
-  font-size: 20px;
+  font-size: 1.11em;
   font-family: 'SF Mono', 'Consolas', 'Liberation Mono', monospace;
   text-transform: uppercase;
   letter-spacing: 0.06em;
@@ -136,7 +136,7 @@ html, body {
 .search-box input::placeholder {
   text-transform: none;
   font-family: -apple-system, 'Segoe UI', Roboto, sans-serif;
-  font-size: 16px;
+  font-size: 0.85em;
   letter-spacing: normal;
   color: var(--text-dim);
 }
@@ -147,12 +147,12 @@ html, body {
 }
 
 .search-box button {
-  padding: 12px 20px;
+  padding: 0.56em 1em;
   background: var(--accent);
   color: #fff;
   border: none;
   border-radius: 6px;
-  font-size: 18px;
+  font-size: 1em;
   font-weight: 600;
   cursor: pointer;
   white-space: nowrap;
@@ -173,21 +173,21 @@ html, body {
   flex: 1;
   overflow-y: auto;
   overflow-x: hidden;
-  padding: 14px;
+  padding: 0.78em;
 }
 
 /* ── Back button ── */
 .back-btn {
   display: inline-flex;
   align-items: center;
-  gap: 6px;
-  padding: 12px 18px;
-  margin-bottom: 14px;
+  gap: 0.33em;
+  padding: 0.56em 0.89em;
+  margin-bottom: 0.78em;
   background: var(--btn-bg);
   border: 1px solid var(--border);
   border-radius: 8px;
   color: var(--text-dim);
-  font-size: 18px;
+  font-size: 1em;
   font-weight: 500;
   cursor: pointer;
   transition: background 0.12s, color 0.12s;
@@ -206,38 +206,38 @@ html, body {
 
 /* ── Airport info ── */
 .airport-info {
-  margin-bottom: 14px;
+  margin-bottom: 0.78em;
 }
 
 .airport-info h2 {
-  font-size: 22px;
+  font-size: 1.22em;
   font-weight: 700;
   color: var(--text);
   line-height: 1.3;
 }
 
 .airport-info .code {
-  font-size: 16px;
+  font-size: 0.89em;
   font-family: 'SF Mono', 'Consolas', 'Liberation Mono', monospace;
   color: var(--text-dim);
   letter-spacing: 0.04em;
-  margin-top: 3px;
+  margin-top: 0.17em;
 }
 
 /* ── Category buttons ── */
 .categories {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 10px;
+  gap: 0.56em;
 }
 
 .cat-btn {
-  padding: 20px 16px;
+  padding: 1em 0.78em;
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: 10px;
   color: var(--text);
-  font-size: 18px;
+  font-size: 1em;
   font-weight: 600;
   cursor: pointer;
   text-align: center;
@@ -258,29 +258,29 @@ html, body {
 
 .cat-btn .count {
   display: block;
-  font-size: 14px;
+  font-size: 0.78em;
   font-weight: 400;
   color: var(--text-dim);
-  margin-top: 4px;
+  margin-top: 0.22em;
 }
 
 /* ── Plate list ── */
 .plate-list {
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  gap: 0.33em;
 }
 
 .plate-item {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 16px;
+  padding: 0.78em;
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: 8px;
   color: var(--text);
-  font-size: 18px;
+  font-size: 1em;
   cursor: pointer;
   transition: background 0.12s, border-color 0.12s;
 }
@@ -307,9 +307,9 @@ html, body {
 .plate-item .page-num {
   flex-shrink: 0;
   color: var(--text-dim);
-  font-size: 15px;
+  font-size: 0.83em;
   font-family: 'SF Mono', 'Consolas', 'Liberation Mono', monospace;
-  margin-left: 12px;
+  margin-left: 0.67em;
 }
 
 /* ── Plate viewer ── */
@@ -328,8 +328,8 @@ html, body {
 .plate-toolbar {
   display: flex;
   align-items: center;
-  gap: 6px;
-  padding: 8px 10px;
+  gap: 0.33em;
+  padding: 0.44em 0.56em;
   background: var(--surface);
   border-bottom: 1px solid var(--border);
   flex-shrink: 0;
@@ -337,26 +337,26 @@ html, body {
 
 .plate-toolbar .title {
   flex: 1;
-  font-size: 16px;
+  font-size: 0.89em;
   font-weight: 600;
   color: var(--text);
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  padding: 0 4px;
+  padding: 0 0.22em;
 }
 
 .plate-toolbar button {
-  padding: 12px 16px;
+  padding: 0.56em 0.78em;
   background: var(--btn-bg);
   border: 1px solid var(--border);
   border-radius: 8px;
   color: var(--text);
-  font-size: 18px;
+  font-size: 1em;
   font-weight: 600;
   cursor: pointer;
   white-space: nowrap;
-  min-width: 42px;
+  min-width: 2.33em;
   text-align: center;
   transition: background 0.12s;
 }
@@ -370,12 +370,12 @@ html, body {
   transform: scale(0.96);
 }
 
-/* Distinct style for the Back button in plate toolbar */
 .plate-toolbar button#plateBack {
   background: var(--accent);
   border-color: transparent;
   color: #fff;
-  font-size: 18px;
+  padding: 0.67em 1.11em;
+  font-size: 1.05em;
 }
 
 .plate-toolbar button#plateBack:hover {
@@ -410,7 +410,7 @@ html, body {
   border: 1px solid var(--border);
   border-top: none;
   border-radius: 0 0 8px 8px;
-  max-height: 300px;
+  max-height: 16em;
   overflow-y: auto;
   z-index: 20;
   display: none;
@@ -422,10 +422,10 @@ html, body {
 }
 
 .search-result-item {
-  padding: 14px 16px;
+  padding: 0.89em 0.78em;
   cursor: pointer;
   border-bottom: 1px solid var(--border-subtle);
-  font-size: 18px;
+  font-size: 1em;
   transition: background 0.1s;
 }
 
@@ -441,11 +441,17 @@ html, body {
   background: var(--surface-active);
 }
 
+.search-result-item.active {
+  background: var(--surface-hover);
+  border-left: 3px solid var(--accent);
+  padding-left: calc(0.78em - 3px);
+}
+
 .search-result-item .result-code {
   font-weight: 700;
   font-family: 'SF Mono', 'Consolas', 'Liberation Mono', monospace;
   color: var(--accent);
-  margin-right: 10px;
+  margin-right: 0.56em;
 }
 
 .search-result-item .result-name {
@@ -455,25 +461,25 @@ html, body {
 /* ── Empty state ── */
 .empty-state {
   text-align: center;
-  padding: 60px 24px;
+  padding: 3.33em 1.33em;
   color: var(--text-dim);
 }
 
 .empty-state h2 {
-  font-size: 22px;
+  font-size: 1.22em;
   font-weight: 700;
   color: var(--text);
-  margin-bottom: 6px;
+  margin-bottom: 0.33em;
 }
 
 .empty-state .region {
-  font-size: 16px;
+  font-size: 0.89em;
   color: var(--text-dim);
-  margin-bottom: 16px;
+  margin-bottom: 0.89em;
 }
 
 .empty-state p {
-  font-size: 18px;
+  font-size: 1em;
   line-height: 1.6;
   color: var(--text-dim);
 }
@@ -502,7 +508,7 @@ html, body {
   flex-shrink: 0;
   background: var(--surface);
   border-top: 1px solid var(--border);
-  padding: 8px;
+  padding: 0.44em;
 }
 
 .osk.visible {
@@ -512,8 +518,8 @@ html, body {
 .osk-row {
   display: flex;
   justify-content: center;
-  gap: 4px;
-  margin-bottom: 4px;
+  gap: 0.22em;
+  margin-bottom: 0.22em;
 }
 
 .osk-row:last-child {
@@ -521,13 +527,13 @@ html, body {
 }
 
 .osk-key {
-  min-width: 36px;
-  height: 42px;
+  min-width: 2.5em;
+  height: 2.78em;
   background: var(--btn-bg);
   border: 1px solid var(--border);
   border-radius: 6px;
   color: var(--text);
-  font-size: 18px;
+  font-size: 1em;
   font-weight: 600;
   font-family: 'SF Mono', 'Consolas', 'Liberation Mono', monospace;
   cursor: pointer;
@@ -548,6 +554,32 @@ html, body {
 }
 
 .osk-key.wide {
-  min-width: 72px;
-  font-size: 14px;
+  min-width: 4em;
+  font-size: 0.78em;
+}
+
+.osk-key[data-key="GO"] {
+  background: var(--accent);
+  border-color: transparent;
+  color: #fff;
+}
+
+.osk-key[data-key="GO"]:hover {
+  background: var(--accent-hover);
+}
+
+.osk-key[data-key="GO"]:active {
+  background: #3a8ae8;
+  color: #fff;
+}
+
+/* ── Recent airports label ── */
+.recent-label {
+  padding: 0.44em 0.78em;
+  font-size: 0.78em;
+  font-weight: 600;
+  color: var(--text-dim);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  border-bottom: 1px solid var(--border-subtle);
 }
