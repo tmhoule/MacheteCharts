@@ -1,0 +1,15 @@
+# Source PDF (82MB)
+*.pdf
+
+# Temp chart upload directory
+chart_upload/
+
+# Reference plugins (not ours)
+navigraph-ingamepanels-charts/
+vs-radio-toolbar/
+
+# SPB tooling artifacts
+TextDecode.Data.cs
+
+# macOS
+.DS_Store

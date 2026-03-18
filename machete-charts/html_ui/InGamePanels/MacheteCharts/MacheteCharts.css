@@ -1,0 +1,462 @@
+#app, #app * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+#app input {
+  -webkit-user-select: text;
+  user-select: text;
+}
+
+:root {
+  --bg: #18181c;
+  --surface: #222228;
+  --surface-hover: #2c2c34;
+  --surface-active: #34343e;
+  --border: #36363f;
+  --border-subtle: #2e2e36;
+  --text: #e2e2e6;
+  --text-dim: #82828e;
+  --accent: #4a9eff;
+  --accent-hover: #6ab4ff;
+  --accent-glow: rgba(74, 158, 255, 0.12);
+  --btn-bg: #28282f;
+  --btn-hover: #32323b;
+  --btn-active: #3a3a44;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: var(--bg);
+  color: var(--text);
+  font-family: -apple-system, 'Segoe UI', Roboto, sans-serif;
+  font-size: 18px;
+  -webkit-font-smoothing: antialiased;
+}
+
+#app {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  position: relative;
+}
+
+/* ── Header ── */
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 12px 14px;
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+  flex-shrink: 0;
+}
+
+.header h1 {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--accent);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.search-wrapper {
+  position: relative;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.search-wrapper .search-box {
+  flex: none;
+}
+
+.search-box {
+  flex: 1;
+  display: flex;
+  gap: 6px;
+}
+
+.search-box input {
+  flex: 1;
+  padding: 12px 14px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  color: var(--text);
+  font-size: 20px;
+  font-family: 'SF Mono', 'Consolas', 'Liberation Mono', monospace;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  outline: none;
+  min-width: 0;
+  transition: border-color 0.15s;
+}
+
+.search-box input::placeholder {
+  text-transform: none;
+  font-family: -apple-system, 'Segoe UI', Roboto, sans-serif;
+  font-size: 16px;
+  letter-spacing: normal;
+  color: var(--text-dim);
+}
+
+.search-box input:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 2px var(--accent-glow);
+}
+
+.search-box button {
+  padding: 12px 20px;
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 0.12s;
+}
+
+.search-box button:hover {
+  background: var(--accent-hover);
+}
+
+.search-box button:active {
+  background: #3a8ae8;
+  transform: scale(0.97);
+}
+
+/* ── Content area ── */
+.content {
+  flex: 1;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 14px;
+}
+
+/* ── Back button ── */
+.back-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 12px 18px;
+  margin-bottom: 14px;
+  background: var(--btn-bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  color: var(--text-dim);
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.12s, color 0.12s;
+}
+
+.back-btn:hover {
+  background: var(--btn-hover);
+  color: var(--text);
+}
+
+.back-btn:active {
+  background: var(--btn-active);
+  color: var(--text);
+  transform: scale(0.97);
+}
+
+/* ── Airport info ── */
+.airport-info {
+  margin-bottom: 14px;
+}
+
+.airport-info h2 {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--text);
+  line-height: 1.3;
+}
+
+.airport-info .code {
+  font-size: 16px;
+  font-family: 'SF Mono', 'Consolas', 'Liberation Mono', monospace;
+  color: var(--text-dim);
+  letter-spacing: 0.04em;
+  margin-top: 3px;
+}
+
+/* ── Category buttons ── */
+.categories {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.cat-btn {
+  padding: 20px 16px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  color: var(--text);
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  text-align: center;
+  transition: background 0.12s, border-color 0.12s, box-shadow 0.12s;
+}
+
+.cat-btn:hover {
+  background: var(--surface-hover);
+  border-color: var(--accent);
+  box-shadow: 0 0 0 1px var(--accent-glow);
+}
+
+.cat-btn:active {
+  background: var(--surface-active);
+  border-color: var(--accent);
+  transform: scale(0.98);
+}
+
+.cat-btn .count {
+  display: block;
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--text-dim);
+  margin-top: 4px;
+}
+
+/* ── Plate list ── */
+.plate-list {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.plate-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  color: var(--text);
+  font-size: 18px;
+  cursor: pointer;
+  transition: background 0.12s, border-color 0.12s;
+}
+
+.plate-item:hover {
+  background: var(--surface-hover);
+  border-color: var(--accent);
+}
+
+.plate-item:active {
+  background: var(--surface-active);
+  border-color: var(--accent);
+  transform: scale(0.99);
+}
+
+.plate-item .plate-name {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.plate-item .page-num {
+  flex-shrink: 0;
+  color: var(--text-dim);
+  font-size: 15px;
+  font-family: 'SF Mono', 'Consolas', 'Liberation Mono', monospace;
+  margin-left: 12px;
+}
+
+/* ── Plate viewer ── */
+.plate-viewer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  display: flex;
+  flex-direction: column;
+  z-index: 10;
+}
+
+.plate-toolbar {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 10px;
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+  flex-shrink: 0;
+}
+
+.plate-toolbar .title {
+  flex: 1;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  padding: 0 4px;
+}
+
+.plate-toolbar button {
+  padding: 12px 16px;
+  background: var(--btn-bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  color: var(--text);
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  min-width: 42px;
+  text-align: center;
+  transition: background 0.12s;
+}
+
+.plate-toolbar button:hover {
+  background: var(--btn-hover);
+}
+
+.plate-toolbar button:active {
+  background: var(--btn-active);
+  transform: scale(0.96);
+}
+
+/* Distinct style for the Back button in plate toolbar */
+.plate-toolbar button#plateBack {
+  background: var(--accent);
+  border-color: transparent;
+  color: #fff;
+  font-size: 18px;
+}
+
+.plate-toolbar button#plateBack:hover {
+  background: var(--accent-hover);
+}
+
+.plate-toolbar button#plateBack:active {
+  background: #3a8ae8;
+}
+
+.plate-container {
+  flex: 1;
+  overflow: hidden;
+  position: relative;
+  touch-action: none;
+}
+
+.plate-container img {
+  position: absolute;
+  transform-origin: 0 0;
+  max-width: none;
+  image-rendering: auto;
+}
+
+/* ── Search results dropdown ── */
+.search-results {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-top: none;
+  border-radius: 0 0 8px 8px;
+  max-height: 300px;
+  overflow-y: auto;
+  z-index: 20;
+  display: none;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+}
+
+.search-results.visible {
+  display: block;
+}
+
+.search-result-item {
+  padding: 14px 16px;
+  cursor: pointer;
+  border-bottom: 1px solid var(--border-subtle);
+  font-size: 18px;
+  transition: background 0.1s;
+}
+
+.search-result-item:last-child {
+  border-bottom: none;
+}
+
+.search-result-item:hover {
+  background: var(--surface-hover);
+}
+
+.search-result-item:active {
+  background: var(--surface-active);
+}
+
+.search-result-item .result-code {
+  font-weight: 700;
+  font-family: 'SF Mono', 'Consolas', 'Liberation Mono', monospace;
+  color: var(--accent);
+  margin-right: 10px;
+}
+
+.search-result-item .result-name {
+  color: var(--text-dim);
+}
+
+/* ── Empty state ── */
+.empty-state {
+  text-align: center;
+  padding: 60px 24px;
+  color: var(--text-dim);
+}
+
+.empty-state h2 {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 6px;
+}
+
+.empty-state .region {
+  font-size: 16px;
+  color: var(--text-dim);
+  margin-bottom: 16px;
+}
+
+.empty-state p {
+  font-size: 18px;
+  line-height: 1.6;
+  color: var(--text-dim);
+}
+
+/* ── Scrollbar ── */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-dim);
+}

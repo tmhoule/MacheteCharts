@@ -1,0 +1,2759 @@
+{
+  "LEW": {
+    "name": "AUBURN/LEWISTON MUNI",
+    "code": "LEW",
+    "plates": {
+      "approach": [
+        {
+          "name": "ILS OR LOC RWY 04",
+          "page": "1"
+        },
+        {
+          "name": "RNAV (GPS) RWY 04",
+          "page": "2"
+        },
+        {
+          "name": "RNAV (GPS) RWY 22",
+          "page": "3"
+        }
+      ],
+      "diagram": [
+        {
+          "name": "AIRPORT DIAGRAM",
+          "page": "4"
+        }
+      ]
+    }
+  },
+  "AUG": {
+    "name": "AUGUSTA STATE",
+    "code": "AUG",
+    "plates": {
+      "approach": [
+        {
+          "name": "ILS OR LOC RWY 17",
+          "page": "5"
+        },
+        {
+          "name": "RNAV (GPS) RWY 17",
+          "page": "6"
+        },
+        {
+          "name": "RNAV (GPS) RWY 35",
+          "page": "7"
+        },
+        {
+          "name": "VOR RWY 35",
+          "page": "8"
+        }
+      ],
+      "diagram": [
+        {
+          "name": "AIRPORT DIAGRAM",
+          "page": "9"
+        }
+      ]
+    }
+  },
+  "BGR": {
+    "name": "BANGOR INTL",
+    "code": "BGR",
+    "plates": {
+      "approach": [
+        {
+          "name": "ILS OR LOC RWY 33",
+          "page": "10"
+        },
+        {
+          "name": "ILS Y OR LOC Y RWY 15",
+          "page": "11"
+        },
+        {
+          "name": "ILS RWY 33 (SA CAT I - II)",
+          "page": "12"
+        },
+        {
+          "name": "ILS Y RWY 15 (CAT II - III)",
+          "page": "13"
+        },
+        {
+          "name": "RNAV (GPS) RWY 15",
+          "page": "14"
+        },
+        {
+          "name": "RNAV (GPS) RWY 33",
+          "page": "15"
+        }
+      ],
+      "diagram": [
+        {
+          "name": "AIRPORT DIAGRAM",
+          "page": "16"
+        }
+      ],
+      "departure": [
+        {
+          "name": "BANGOR FIVE",
+          "page": "17"
+        }
+      ]
+    }
+  },
+  "BHB": {
+    "name": "HANCOCK COUNTY/BAR HARBOR",
+    "code": "BHB",
+    "plates": {
+      "approach": [
+        {
+          "name": "ILS OR LOC RWY 22",
+          "page": "18"
+        },
+        {
+          "name": "RNAV (GPS) RWY 04",
+          "page": "19"
+        },
+        {
+          "name": "RNAV (GPS) RWY 22",
+          "page": "20"
+        }
+      ]
+    }
+  },
+  "MPV": {
+    "name": "EDWARD F KNAPP STATE",
+    "code": "MPV",
+    "plates": {
+      "approach": [
+        {
+          "name": "ILS OR LOC RWY 17",
+          "page": "21"
+        },
+        {
+          "name": "RNAV (GPS) RWY 17",
+          "page": "22"
+        },
+        {
+          "name": "RNAV (GPS) RWY 35",
+          "page": "23"
+        }
+      ]
+    }
+  },
+  "BID": {
+    "name": "BLOCK ISLAND STATE",
+    "code": "BID",
+    "plates": {
+      "approach": [
+        {
+          "name": "RNAV (GPS) RWY 10",
+          "page": "45"
+        },
+        {
+          "name": "RNAV (GPS) RWY 28",
+          "page": "46"
+        },
+        {
+          "name": "VOR/DME RWY 10",
+          "page": "47"
+        }
+      ]
+    }
+  },
+  "BOS": {
+    "name": "GENERAL EDWARD LAWRENCE LOGAN INTL",
+    "code": "BOS",
+    "plates": {
+      "star": [
+        {
+          "name": "JFUND TWO (RNAV)",
+          "page": "Z7"
+        },
+        {
+          "name": "OOSHN FIVE (RNAV)",
+          "page": "Z12"
+        },
+        {
+          "name": "ROBUC THREE (RNAV)",
+          "page": "Z15"
+        },
+        {
+          "name": "WOONS TWO",
+          "page": "Z26"
+        }
+      ],
+      "approach": [
+        {
+          "name": "ILS OR LOC RWY 04R",
+          "page": "48"
+        },
+        {
+          "name": "ILS OR LOC RWY 15R",
+          "page": "49"
+        },
+        {
+          "name": "ILS OR LOC RWY 22L",
+          "page": "50"
+        },
+        {
+          "name": "ILS OR LOC RWY 27",
+          "page": "51"
+        },
+        {
+          "name": "ILS OR LOC RWY 33L",
+          "page": "52"
+        },
+        {
+          "name": "ILS RWY 04R (SA CAT I)",
+          "page": "53"
+        },
+        {
+          "name": "ILS RWY 33L (SA CAT I)",
+          "page": "54"
+        },
+        {
+          "name": "ILS RWY 04R (CAT II - III)",
+          "page": "55"
+        },
+        {
+          "name": "ILS RWY 33L (CAT II - III)",
+          "page": "56"
+        },
+        {
+          "name": "RNAV (RNP) X RWY 33L",
+          "page": "57"
+        },
+        {
+          "name": "RNAV (GPS) RWY 04L",
+          "page": "58"
+        },
+        {
+          "name": "RNAV (GPS) RWY 04R",
+          "page": "59"
+        },
+        {
+          "name": "RNAV (GPS) RWY 15R",
+          "page": "60"
+        },
+        {
+          "name": "RNAV (GPS) RWY 27",
+          "page": "61"
+        },
+        {
+          "name": "RNAV (GPS) RWY 32",
+          "page": "62"
+        },
+        {
+          "name": "RNAV (GPS) X RWY 22L",
+          "page": "63"
+        },
+        {
+          "name": "RNAV (GPS) Y RWY 22L",
+          "page": "64"
+        },
+        {
+          "name": "RNAV (GPS) Z RWY 33L",
+          "page": "65"
+        },
+        {
+          "name": "LIGHT VISUAL RWY 33L",
+          "page": "66"
+        }
+      ],
+      "diagram": [
+        {
+          "name": "AIRPORT DIAGRAM",
+          "page": "67"
+        }
+      ],
+      "departure": [
+        {
+          "name": "BLZZR SIX (RNAV)",
+          "page": "68"
+        },
+        {
+          "name": "BRUWN SEVEN (RNAV)",
+          "page": "70"
+        },
+        {
+          "name": "CELTK SEVEN (RNAV)",
+          "page": "72"
+        },
+        {
+          "name": "HYLND SEVEN (RNAV)",
+          "page": "74"
+        },
+        {
+          "name": "LBSTA EIGHT (RNAV)",
+          "page": "76"
+        },
+        {
+          "name": "LOGAN FOUR",
+          "page": "78"
+        },
+        {
+          "name": "PATSS SEVEN (RNAV)",
+          "page": "80"
+        },
+        {
+          "name": "REVSS SIX (RNAV)",
+          "page": "82"
+        },
+        {
+          "name": "SSOXS SEVEN (RNAV)",
+          "page": "84"
+        },
+        {
+          "name": "WYLYY FIVE (RNAV)",
+          "page": "86"
+        }
+      ]
+    }
+  },
+  "CQX": {
+    "name": "CHATHAM MUNI",
+    "code": "CQX",
+    "plates": {
+      "approach": [
+        {
+          "name": "RNAV (GPS)-B",
+          "page": "108"
+        },
+        {
+          "name": "NDB-A",
+          "page": "109"
+        }
+      ]
+    }
+  },
+  "SNC": {
+    "name": "CHESTER",
+    "code": "SNC",
+    "plates": {
+      "star": [
+        {
+          "name": "SARDI ONE (RNAV)",
+          "page": "Z20"
+        }
+      ],
+      "approach": [
+        {
+          "name": "RNAV (GPS) RWY 17",
+          "page": "110"
+        },
+        {
+          "name": "RNAV (GPS) RWY 35",
+          "page": "111"
+        }
+      ]
+    }
+  },
+  "CNH": {
+    "name": "CLAREMONT MUNI",
+    "code": "CNH",
+    "plates": {
+      "approach": [
+        {
+          "name": "RNAV (GPS) RWY 29",
+          "page": "112"
+        }
+      ]
+    }
+  },
+  "CON": {
+    "name": "CONCORD MUNI",
+    "code": "CON",
+    "plates": {
+      "approach": [
+        {
+          "name": "ILS OR LOC RWY 35",
+          "page": "113"
+        },
+        {
+          "name": "RNAV (GPS) RWY 12",
+          "page": "114"
+        },
+        {
+          "name": "RNAV (GPS) RWY 17",
+          "page": "115"
+        },
+        {
+          "name": "RNAV (GPS) RWY 35",
+          "page": "116"
+        },
+        {
+          "name": "VOR-A",
+          "page": "117"
+        }
+      ],
+      "diagram": [
+        {
+          "name": "AIRPORT DIAGRAM",
+          "page": "118"
+        }
+      ]
+    }
+  },
+  "DXR": {
+    "name": "DANBURY MUNI",
+    "code": "DXR",
+    "plates": {
+      "star": [
+        {
+          "name": "NOBBI ONE (RNAV)",
+          "page": "Z11"
+        },
+        {
+          "name": "RICED FOUR",
+          "page": "Z14"
+        },
+        {
+          "name": "VALRE ONE (RNAV)",
+          "page": "Z24"
+        }
+      ],
+      "approach": [
+        {
+          "name": "RNAV (GPS) RWY 26",
+          "page": "119"
+        },
+        {
+          "name": "RNAV (GPS) Y RWY 08",
+          "page": "120"
+        },
+        {
+          "name": "RNAV (GPS) Z RWY 08",
+          "page": "121"
+        },
+        {
+          "name": "RNAV (GPS)-A",
+          "page": "122"
+        },
+        {
+          "name": "LOC RWY 08",
+          "page": "123"
+        }
+      ],
+      "diagram": [
+        {
+          "name": "AIRPORT DIAGRAM",
+          "page": "124"
+        }
+      ]
+    }
+  },
+  "LZD": {
+    "name": "DANIELSON",
+    "code": "LZD",
+    "plates": {
+      "approach": [
+        {
+          "name": "VOR-A",
+          "page": "125"
+        }
+      ]
+    }
+  },
+  "43B": {
+    "name": "DEBLOIS FLIGHT STRIP",
+    "code": "43B",
+    "plates": {
+      "approach": [
+        {
+          "name": "RNAV (GPS)-A",
+          "page": "126"
+        }
+      ],
+      "departure": [
+        {
+          "name": "DEBLOIS ONE (OBSTACLE)",
+          "page": "127"
+        }
+      ]
+    }
+  },
+  "IZG": {
+    "name": "WHITE MOUNTAIN RGNL",
+    "code": "IZG",
+    "plates": {
+      "approach": [
+        {
+          "name": "RNAV (GPS) RWY 32",
+          "page": "149"
+        }
+      ]
+    }
+  },
+  "GDM": {
+    "name": "GARDNER MUNI",
+    "code": "GDM",
+    "plates": {
+      "approach": [
+        {
+          "name": "RNAV (GPS)-B",
+          "page": "150"
+        },
+        {
+          "name": "VOR-A",
+          "page": "151"
+        }
+      ]
+    }
+  },
+  "GBR": {
+    "name": "GREAT BARRINGTON",
+    "code": "GBR",
+    "plates": {
+      "approach": [
+        {
+          "name": "RNAV (GPS) RWY 11",
+          "page": "152"
+        },
+        {
+          "name": "RNAV (GPS)-B",
+          "page": "153"
+        }
+      ]
+    }
+  },
+  "3B1": {
+    "name": "GREENVILLE MUNI",
+    "code": "3B1",
+    "plates": {
+      "approach": [
+        {
+          "name": "RNAV (GPS) RWY 14",
+          "page": "154"
+        },
+        {
+          "name": "RNAV (GPS) RWY 32",
+          "page": "155"
+        }
+      ]
+    }
+  },
+  "52B": {
+    "name": "MOOSEHEAD AERO MARINE",
+    "code": "52B",
+    "plates": {
+      "approach": [
+        {
+          "name": "RNAV (GPS)-B",
+          "page": "156"
+        }
+      ]
+    }
+  },
+  "GON": {
+    "name": "GROTON-NEW LONDON",
+    "code": "GON",
+    "plates": {
+      "star": [
+        {
+          "name": "SARDI ONE (RNAV)",
+          "page": "Z20"
+        }
+      ],
+      "approach": [
+        {
+          "name": "ILS OR LOC RWY 05",
+          "page": "158"
+        },
+        {
+          "name": "RNAV (GPS) RWY 05",
+          "page": "159"
+        },
+        {
+          "name": "RNAV (GPS) RWY 23",
+          "page": "160"
+        },
+        {
+          "name": "RNAV (GPS) RWY 33",
+          "page": "161"
+        },
+        {
+          "name": "VOR RWY 05",
+          "page": "162"
+        },
+        {
+          "name": "VOR RWY 23",
+          "page": "163"
+        }
+      ],
+      "diagram": [
+        {
+          "name": "AIRPORT DIAGRAM",
+          "page": "164"
+        }
+      ]
+    }
+  },
+  "HFD": {
+    "name": "HARTFORD-BRAINARD",
+    "code": "HFD",
+    "plates": {
+      "star": [
+        {
+          "name": "STELA ONE (RNAV)",
+          "page": "Z23"
+        }
+      ],
+      "approach": [
+        {
+          "name": "RNAV (GPS) RWY 02",
+          "page": "165"
+        },
+        {
+          "name": "LDA RWY 02",
+          "page": "166"
+        },
+        {
+          "name": "VOR-A",
+          "page": "167"
+        },
+        {
+          "name": "RIVER VISUAL RWY 02",
+          "page": "168"
+        }
+      ],
+      "diagram": [
+        {
+          "name": "AIRPORT DIAGRAM",
+          "page": "169"
+        }
+      ],
+      "departure": [
+        {
+          "name": "THUMB ONE (RNAV)",
+          "page": "170"
+        }
+      ]
+    }
+  },
+  "LCI": {
+    "name": "LACONIA MUNI",
+    "code": "LCI",
+    "plates": {
+      "approach": [
+        {
+          "name": "ILS OR LOC RWY 08",
+          "page": "193"
+        },
+        {
+          "name": "RNAV (GPS) RWY 08",
+          "page": "194"
+        },
+        {
+          "name": "RNAV (GPS) RWY 26",
+          "page": "195"
+        }
+      ]
+    }
+  },
+  "LWM": {
+    "name": "LAWRENCE MUNI",
+    "code": "LWM",
+    "plates": {
+      "star": [
+        {
+          "name": "DREEM THREE (RNAV)",
+          "page": "Z5"
+        },
+        {
+          "name": "ZELKA TWO (RNAV)",
+          "page": "Z27"
+        }
+      ],
+      "approach": [
+        {
+          "name": "ILS OR LOC RWY 05",
+          "page": "196"
+        },
+        {
+          "name": "RNAV (GPS) RWY 05",
+          "page": "197"
+        },
+        {
+          "name": "RNAV (GPS) RWY 14",
+          "page": "198"
+        },
+        {
+          "name": "RNAV (GPS) RWY 23",
+          "page": "199"
+        },
+        {
+          "name": "RNAV (GPS) RWY 32",
+          "page": "200"
+        }
+      ],
+      "diagram": [
+        {
+          "name": "AIRPORT DIAGRAM",
+          "page": "201"
+        }
+      ],
+      "departure": [
+        {
+          "name": "LAWRENCE TWO",
+          "page": "202"
+        }
+      ]
+    }
+  },
+  "LEB": {
+    "name": "LEBANON MUNI",
+    "code": "LEB",
+    "plates": {
+      "approach": [
+        {
+          "name": "ILS OR LOC RWY 18",
+          "page": "204"
+        },
+        {
+          "name": "RNAV (GPS) RWY 07",
+          "page": "205"
+        },
+        {
+          "name": "RNAV (GPS) RWY 18",
+          "page": "206"
+        },
+        {
+          "name": "RNAV (GPS) RWY 25",
+          "page": "207"
+        },
+        {
+          "name": "RNAV (GPS) RWY 36",
+          "page": "208"
+        }
+      ],
+      "diagram": [
+        {
+          "name": "AIRPORT DIAGRAM",
+          "page": "209"
+        }
+      ]
+    }
+  },
+  "LRG": {
+    "name": "LINCOLN RGNL",
+    "code": "LRG",
+    "plates": {
+      "approach": [
+        {
+          "name": "RNAV (GPS) RWY 16",
+          "page": "210"
+        },
+        {
+          "name": "RNAV (GPS) RWY 34",
+          "page": "211"
+        }
+      ]
+    }
+  },
+  "CDA": {
+    "name": "CALEDONIA COUNTY",
+    "code": "CDA",
+    "plates": {
+      "approach": [
+        {
+          "name": "RNAV (GPS) RWY 02",
+          "page": "212"
+        }
+      ]
+    }
+  },
+  "MVM": {
+    "name": "MACHIAS VALLEY",
+    "code": "MVM",
+    "plates": {
+      "approach": [
+        {
+          "name": "RNAV (GPS) RWY 36",
+          "page": "213"
+        }
+      ]
+    }
+  },
+  "MVL": {
+    "name": "MORRISVILLE-STOWE STATE",
+    "code": "MVL",
+    "plates": {
+      "approach": [
+        {
+          "name": "RNAV (GPS) Y RWY 19",
+          "page": "239"
+        },
+        {
+          "name": "RNAV (GPS) Z RWY 19",
+          "page": "240"
+        },
+        {
+          "name": "RNAV (GPS)-A",
+          "page": "241"
+        }
+      ]
+    }
+  },
+  "ACK": {
+    "name": "NANTUCKET MEML",
+    "code": "ACK",
+    "plates": {
+      "star": [
+        {
+          "name": "DEEPO TWO (RNAV)",
+          "page": "Z2"
+        }
+      ],
+      "approach": [
+        {
+          "name": "ILS OR LOC RWY 06",
+          "page": "242"
+        },
+        {
+          "name": "ILS OR LOC RWY 24",
+          "page": "243"
+        },
+        {
+          "name": "ILS RWY 24 (SA CAT I)",
+          "page": "244"
+        },
+        {
+          "name": "RNAV (GPS) RWY 06",
+          "page": "245"
+        },
+        {
+          "name": "RNAV (GPS) RWY 15",
+          "page": "246"
+        },
+        {
+          "name": "RNAV (GPS) RWY 24",
+          "page": "247"
+        },
+        {
+          "name": "RNAV (GPS) RWY 33",
+          "page": "248"
+        },
+        {
+          "name": "VOR RWY 24",
+          "page": "249"
+        },
+        {
+          "name": "GREAT POINT VISUAL RWY 24",
+          "page": "250"
+        },
+        {
+          "name": "TUCKERNUCK VISUAL RWY 06",
+          "page": "251"
+        }
+      ],
+      "diagram": [
+        {
+          "name": "AIRPORT DIAGRAM",
+          "page": "252"
+        }
+      ]
+    }
+  },
+  "ASH": {
+    "name": "BOIRE FLD",
+    "code": "ASH",
+    "plates": {
+      "approach": [
+        {
+          "name": "ILS OR LOC RWY 14",
+          "page": "253"
+        },
+        {
+          "name": "RNAV (GPS) RWY 14",
+          "page": "254"
+        },
+        {
+          "name": "RNAV (GPS) RWY 32",
+          "page": "255"
+        }
+      ],
+      "diagram": [
+        {
+          "name": "AIRPORT DIAGRAM",
+          "page": "256"
+        }
+      ]
+    }
+  },
+  "EWB": {
+    "name": "NEW BEDFORD RGNL",
+    "code": "EWB",
+    "plates": {
+      "star": [
+        {
+          "name": "WIPOR FOUR (RNAV)",
+          "page": "Z25"
+        }
+      ],
+      "approach": [
+        {
+          "name": "ILS OR LOC RWY 05",
+          "page": "257"
+        },
+        {
+          "name": "RNAV (GPS) RWY 05",
+          "page": "258"
+        },
+        {
+          "name": "RNAV (GPS) RWY 14",
+          "page": "259"
+        },
+        {
+          "name": "RNAV (GPS) RWY 23",
+          "page": "260"
+        },
+        {
+          "name": "RNAV (GPS) RWY 32",
+          "page": "261"
+        },
+        {
+          "name": "LOC BC RWY 23",
+          "page": "262"
+        }
+      ],
+      "diagram": [
+        {
+          "name": "AIRPORT DIAGRAM",
+          "page": "263"
+        }
+      ]
+    }
+  },
+  "7B2": {
+    "name": "NORTHAMPTON",
+    "code": "7B2",
+    "plates": {
+      "approach": [
+        {
+          "name": "RNAV (GPS) RWY 14",
+          "page": "284"
+        },
+        {
+          "name": "VOR/DME-B",
+          "page": "285"
+        }
+      ]
+    }
+  },
+  "OWD": {
+    "name": "NORWOOD MEML",
+    "code": "OWD",
+    "plates": {
+      "star": [
+        {
+          "name": "WOONS TWO",
+          "page": "Z26"
+        }
+      ],
+      "approach": [
+        {
+          "name": "RNAV (GPS) RWY 35",
+          "page": "286"
+        },
+        {
+          "name": "LOC RWY 35",
+          "page": "287"
+        }
+      ],
+      "diagram": [
+        {
+          "name": "AIRPORT DIAGRAM",
+          "page": "288"
+        }
+      ],
+      "departure": [
+        {
+          "name": "NORWOOD FIVE",
+          "page": "289"
+        }
+      ]
+    }
+  },
+  "OLD": {
+    "name": "DEWITT FLD/OLD TOWN MUNI",
+    "code": "OLD",
+    "plates": {
+      "approach": [
+        {
+          "name": "RNAV (GPS) RWY 12",
+          "page": "291"
+        },
+        {
+          "name": "RNAV (GPS) RWY 22",
+          "page": "292"
+        },
+        {
+          "name": "RNAV (GPS) RWY 30",
+          "page": "293"
+        },
+        {
+          "name": "VOR RWY 22",
+          "page": "294"
+        }
+      ]
+    }
+  },
+  "ORE": {
+    "name": "ORANGE MUNI",
+    "code": "ORE",
+    "plates": {
+      "approach": [
+        {
+          "name": "RNAV (GPS) RWY 32",
+          "page": "295"
+        },
+        {
+          "name": "VOR-A",
+          "page": "296"
+        }
+      ]
+    }
+  },
+  "OXC": {
+    "name": "WATERBURY-OXFORD",
+    "code": "OXC",
+    "plates": {
+      "star": [
+        {
+          "name": "DENNA ONE (RNAV)",
+          "page": "Z4"
+        },
+        {
+          "name": "SARDI ONE (RNAV)",
+          "page": "Z20"
+        }
+      ],
+      "approach": [
+        {
+          "name": "ILS OR LOC RWY 36",
+          "page": "297"
+        },
+        {
+          "name": "RNAV (GPS) RWY 18",
+          "page": "298"
+        },
+        {
+          "name": "RNAV (GPS) RWY 36",
+          "page": "299"
+        }
+      ],
+      "diagram": [
+        {
+          "name": "AIRPORT DIAGRAM",
+          "page": "300"
+        }
+      ]
+    }
+  },
+  "81B": {
+    "name": "OXFORD COUNTY RGNL",
+    "code": "81B",
+    "plates": {
+      "approach": [
+        {
+          "name": "RNAV (GPS) RWY 15",
+          "page": "301"
+        },
+        {
+          "name": "RNAV (GPS) RWY 33",
+          "page": "302"
+        }
+      ]
+    }
+  },
+  "PWM": {
+    "name": "PORTLAND INTL JETPORT",
+    "code": "PWM",
+    "plates": {
+      "star": [
+        {
+          "name": "CDOGG FOUR (RNAV)",
+          "page": "Z1"
+        },
+        {
+          "name": "SCOGS THREE (RNAV)",
+          "page": "Z22"
+        }
+      ],
+      "approach": [
+        {
+          "name": "ILS OR LOC RWY 11",
+          "page": "319"
+        },
+        {
+          "name": "ILS OR LOC RWY 29",
+          "page": "320"
+        },
+        {
+          "name": "ILS RWY 11 (SA CAT I)",
+          "page": "321"
+        },
+        {
+          "name": "ILS RWY 29 (SA CAT I - II)",
+          "page": "322"
+        },
+        {
+          "name": "ILS RWY 11 (CAT II - III)",
+          "page": "323"
+        },
+        {
+          "name": "RNAV (GPS) RWY 11",
+          "page": "324"
+        },
+        {
+          "name": "RNAV (GPS) RWY 18",
+          "page": "325"
+        },
+        {
+          "name": "RNAV (GPS) RWY 29",
+          "page": "326"
+        },
+        {
+          "name": "RNAV (GPS) RWY 36",
+          "page": "327"
+        },
+        {
+          "name": "HARBOR VISUAL RWY 29",
+          "page": "328"
+        }
+      ],
+      "diagram": [
+        {
+          "name": "AIRPORT DIAGRAM",
+          "page": "329"
+        }
+      ],
+      "departure": [
+        {
+          "name": "HSKEL THREE (RNAV)",
+          "page": "330"
+        },
+        {
+          "name": "NUBLE FOUR (RNAV)",
+          "page": "331"
+        },
+        {
+          "name": "PORTLAND SIX",
+          "page": "332"
+        }
+      ]
+    }
+  },
+  "PSM": {
+    "name": "PORTSMOUTH INTL AT PEASE",
+    "code": "PSM",
+    "plates": {
+      "approach": [
+        {
+          "name": "ILS OR LOC RWY 16",
+          "page": "333"
+        },
+        {
+          "name": "ILS OR LOC RWY 34",
+          "page": "334"
+        },
+        {
+          "name": "RNAV (GPS) RWY 16",
+          "page": "335"
+        },
+        {
+          "name": "RNAV (GPS) RWY 34",
+          "page": "336"
+        }
+      ],
+      "diagram": [
+        {
+          "name": "AIRPORT DIAGRAM",
+          "page": "337"
+        }
+      ],
+      "departure": [
+        {
+          "name": "PEASE FOUR",
+          "page": "338"
+        },
+        {
+          "name": "TANKER THREE",
+          "page": "339"
+        }
+      ]
+    }
+  },
+  "PQI": {
+    "name": "PRESQUE ISLE INTL",
+    "code": "PQI",
+    "plates": {
+      "approach": [
+        {
+          "name": "ILS OR LOC RWY 01",
+          "page": "340"
+        },
+        {
+          "name": "RNAV (GPS) RWY 01",
+          "page": "341"
+        },
+        {
+          "name": "RNAV (GPS) RWY 19",
+          "page": "342"
+        },
+        {
+          "name": "RNAV (GPS) RWY 28",
+          "page": "343"
+        },
+        {
+          "name": "VOR RWY 19",
+          "page": "344"
+        }
+      ]
+    }
+  },
+  "PNN": {
+    "name": "PRINCETON MUNI",
+    "code": "PNN",
+    "plates": {
+      "approach": [
+        {
+          "name": "RNAV (GPS) RWY 15",
+          "page": "345"
+        },
+        {
+          "name": "RNAV (GPS) RWY 33",
+          "page": "346"
+        },
+        {
+          "name": "ILS Z OR LOC Z RWY 19",
+          "page": "374"
+        },
+        {
+          "name": "RNAV (GPS) RWY 01",
+          "page": "375"
+        }
+      ]
+    }
+  },
+  "SFM": {
+    "name": "SANFORD SEACOAST RGNL",
+    "code": "SFM",
+    "plates": {
+      "approach": [
+        {
+          "name": "ILS OR LOC RWY 07",
+          "page": "378"
+        },
+        {
+          "name": "RNAV (GPS) RWY 32",
+          "page": "381"
+        },
+        {
+          "name": "VOR RWY 25",
+          "page": "382"
+        }
+      ]
+    }
+  },
+  "6B6": {
+    "name": "MINUTE MAN AIR FLD",
+    "code": "6B6",
+    "plates": {}
+  },
+  "TAN": {
+    "name": "TAUNTON MUNI/KING FLD",
+    "code": "TAN",
+    "plates": {
+      "star": [
+        {
+          "name": "WIPOR FOUR (RNAV)",
+          "page": "Z25"
+        }
+      ],
+      "approach": [
+        {
+          "name": "RNAV (GPS) RWY 12",
+          "page": "387"
+        },
+        {
+          "name": "RNAV (GPS) RWY 30",
+          "page": "388"
+        }
+      ]
+    }
+  },
+  "KCEF": {
+    "name": "WESTOVER ARB/METROPOLITAN",
+    "code": "KCEF",
+    "plates": {
+      "star": [
+        {
+          "name": "DEER PARK THREE",
+          "page": "Z3"
+        },
+        {
+          "name": "STELA ONE (RNAV)",
+          "page": "Z23"
+        }
+      ],
+      "approach": [
+        {
+          "name": "ILS OR LOC RWY 05",
+          "page": "408"
+        },
+        {
+          "name": "ILS OR LOC RWY 23",
+          "page": "409"
+        },
+        {
+          "name": "RNAV (GPS) RWY 05",
+          "page": "410"
+        },
+        {
+          "name": "RNAV (GPS) RWY 23",
+          "page": "411"
+        },
+        {
+          "name": "TACAN RWY 05",
+          "page": "412"
+        },
+        {
+          "name": "TACAN RWY 23",
+          "page": "413"
+        }
+      ],
+      "diagram": [
+        {
+          "name": "AIRPORT DIAGRAM",
+          "page": "414"
+        }
+      ],
+      "departure": [
+        {
+          "name": "THUMB ONE (RNAV)",
+          "page": "415"
+        }
+      ]
+    }
+  },
+  "HIE": {
+    "name": "MOUNT WASHINGTON RGNL",
+    "code": "HIE",
+    "plates": {
+      "approach": [
+        {
+          "name": "RNAV (GPS) Y RWY 10",
+          "page": "416"
+        },
+        {
+          "name": "RNAV (GPS) Z RWY 10",
+          "page": "417"
+        }
+      ]
+    }
+  },
+  "IJD": {
+    "name": "WINDHAM",
+    "code": "IJD",
+    "plates": {
+      "approach": [
+        {
+          "name": "RNAV (GPS) RWY 09",
+          "page": "418"
+        },
+        {
+          "name": "RNAV (GPS) RWY 27",
+          "page": "419"
+        },
+        {
+          "name": "VOR-A",
+          "page": "420"
+        }
+      ]
+    }
+  },
+  "BED": {
+    "name": "LAURENCE G HANSCOM FLD",
+    "code": "BED",
+    "plates": {
+      "star": [
+        {
+          "name": "DREEM THREE (RNAV)",
+          "page": "Z5"
+        },
+        {
+          "name": "ZELKA TWO (RNAV)",
+          "page": "Z27"
+        }
+      ],
+      "approach": [
+        {
+          "name": "ILS OR LOC RWY 11",
+          "page": "24"
+        },
+        {
+          "name": "ILS OR LOC RWY 29",
+          "page": "25"
+        },
+        {
+          "name": "RNAV (GPS) RWY 11",
+          "page": "26"
+        },
+        {
+          "name": "RNAV (GPS) RWY 23",
+          "page": "27"
+        },
+        {
+          "name": "RNAV (GPS) RWY 29",
+          "page": "28"
+        }
+      ],
+      "diagram": [
+        {
+          "name": "AIRPORT DIAGRAM",
+          "page": "29"
+        }
+      ],
+      "departure": [
+        {
+          "name": "HANSCOM FIVE",
+          "page": "30"
+        }
+      ]
+    }
+  },
+  "BST": {
+    "name": "BELFAST MUNI",
+    "code": "BST",
+    "plates": {
+      "approach": [
+        {
+          "name": "RNAV (GPS) RWY 15",
+          "page": "32"
+        },
+        {
+          "name": "RNAV (GPS) RWY 33",
+          "page": "33"
+        }
+      ]
+    }
+  },
+  "DDH": {
+    "name": "WILLIAM H MORSE STATE",
+    "code": "DDH",
+    "plates": {
+      "approach": [
+        {
+          "name": "RNAV (GPS) RWY 13",
+          "page": "34"
+        }
+      ]
+    }
+  },
+  "BML": {
+    "name": "BERLIN RGNL",
+    "code": "BML",
+    "plates": {
+      "approach": [
+        {
+          "name": "RNAV (GPS) RWY 18",
+          "page": "35"
+        }
+      ]
+    }
+  },
+  "0B1": {
+    "name": "BETHEL RGNL",
+    "code": "0B1",
+    "plates": {
+      "approach": [
+        {
+          "name": "RNAV (GPS) Z RWY 32",
+          "page": "36"
+        }
+      ]
+    }
+  },
+  "BVY": {
+    "name": "BEVERLY RGNL",
+    "code": "BVY",
+    "plates": {
+      "star": [
+        {
+          "name": "DREEM THREE (RNAV)",
+          "page": "Z5"
+        },
+        {
+          "name": "ZELKA TWO (RNAV)",
+          "page": "Z27"
+        }
+      ],
+      "approach": [
+        {
+          "name": "RNAV (GPS) RWY 09",
+          "page": "37"
+        },
+        {
+          "name": "RNAV (GPS) RWY 16",
+          "page": "38"
+        },
+        {
+          "name": "RNAV (GPS) RWY 27",
+          "page": "39"
+        },
+        {
+          "name": "RNAV (GPS) RWY 34",
+          "page": "40"
+        }
+      ],
+      "diagram": [
+        {
+          "name": "AIRPORT DIAGRAM",
+          "page": "41"
+        }
+      ],
+      "departure": [
+        {
+          "name": "BEVERLY THREE",
+          "page": "42"
+        }
+      ]
+    }
+  },
+  "B19": {
+    "name": "BIDDEFORD MUNI",
+    "code": "B19",
+    "plates": {
+      "approach": [
+        {
+          "name": "RNAV (GPS) RWY 06",
+          "page": "44"
+        }
+      ]
+    }
+  },
+  "BDR": {
+    "name": "BRIDGEPORT/SIKORSKY",
+    "code": "BDR",
+    "plates": {
+      "star": [
+        {
+          "name": "DENNA ONE (RNAV)",
+          "page": "Z4"
+        },
+        {
+          "name": "SARDI ONE (RNAV)",
+          "page": "Z20"
+        }
+      ],
+      "approach": [
+        {
+          "name": "ILS OR LOC RWY 06",
+          "page": "87"
+        },
+        {
+          "name": "RNAV (GPS) RWY 06",
+          "page": "88"
+        },
+        {
+          "name": "RNAV (GPS) RWY 24",
+          "page": "89"
+        },
+        {
+          "name": "RNAV (GPS) RWY 29",
+          "page": "90"
+        }
+      ],
+      "diagram": [
+        {
+          "name": "AIRPORT DIAGRAM",
+          "page": "91"
+        }
+      ],
+      "departure": [
+        {
+          "name": "BRIDGEHAVEN ONE",
+          "page": "92"
+        }
+      ]
+    }
+  },
+  "BXM": {
+    "name": "BRUNSWICK EXEC",
+    "code": "BXM",
+    "plates": {
+      "approach": [
+        {
+          "name": "ILS OR LOC RWY 01R",
+          "page": "93"
+        },
+        {
+          "name": "RNAV (GPS) RWY 01R",
+          "page": "94"
+        },
+        {
+          "name": "RNAV (GPS) RWY 19L",
+          "page": "95"
+        }
+      ]
+    }
+  },
+  "BTV": {
+    "name": "PATRICK LEAHY BURLINGTON INTL",
+    "code": "BTV",
+    "plates": {
+      "approach": [
+        {
+          "name": "ILS OR LOC RWY 15",
+          "page": "96"
+        },
+        {
+          "name": "ILS OR LOC RWY 33",
+          "page": "97"
+        },
+        {
+          "name": "RNAV (GPS) RWY 01",
+          "page": "98"
+        },
+        {
+          "name": "RNAV (GPS) RWY 15",
+          "page": "99"
+        },
+        {
+          "name": "RNAV (GPS) Y RWY 33",
+          "page": "100"
+        },
+        {
+          "name": "RNAV (GPS) Z RWY 33",
+          "page": "101"
+        },
+        {
+          "name": "VOR RWY 01",
+          "page": "102"
+        }
+      ],
+      "diagram": [
+        {
+          "name": "AIRPORT DIAGRAM",
+          "page": "103"
+        }
+      ],
+      "departure": [
+        {
+          "name": "BURLINGTON ONE",
+          "page": "104"
+        }
+      ]
+    }
+  },
+  "CAR": {
+    "name": "CARIBOU MUNI",
+    "code": "CAR",
+    "plates": {
+      "approach": [
+        {
+          "name": "RNAV (GPS) RWY 01",
+          "page": "105"
+        },
+        {
+          "name": "RNAV (GPS) RWY 19",
+          "page": "106"
+        }
+      ]
+    }
+  },
+  "B21": {
+    "name": "SUGARLOAF RGNL",
+    "code": "B21",
+    "plates": {
+      "approach": [
+        {
+          "name": "RNAV (GPS)-A",
+          "page": "107"
+        }
+      ]
+    }
+  },
+  "1B0": {
+    "name": "DEXTER RGNL",
+    "code": "1B0",
+    "plates": {
+      "approach": [
+        {
+          "name": "RNAV (GPS) RWY 16",
+          "page": "128"
+        },
+        {
+          "name": "RNAV (GPS) RWY 34",
+          "page": "129"
+        }
+      ]
+    }
+  },
+  "EPM": {
+    "name": "EASTPORT MUNI",
+    "code": "EPM",
+    "plates": {
+      "approach": [
+        {
+          "name": "RNAV (GPS) RWY 14",
+          "page": "130"
+        },
+        {
+          "name": "RNAV (GPS) RWY 32",
+          "page": "131"
+        }
+      ]
+    }
+  },
+  "3B4": {
+    "name": "SEACOAST AIRFIELD",
+    "code": "3B4",
+    "plates": {
+      "approach": [
+        {
+          "name": "RNAV (GPS) RWY 30",
+          "page": "132"
+        }
+      ]
+    }
+  },
+  "FMH": {
+    "name": "CAPE COD COAST GUARD AIR STATION",
+    "code": "FMH",
+    "plates": {
+      "approach": [
+        {
+          "name": "ILS Z OR LOC Z RWY 23",
+          "page": "133"
+        },
+        {
+          "name": "ILS Z OR LOC Z RWY 32",
+          "page": "134"
+        },
+        {
+          "name": "RNAV (GPS) RWY 05",
+          "page": "135"
+        },
+        {
+          "name": "RNAV (GPS) RWY 14",
+          "page": "136"
+        },
+        {
+          "name": "RNAV (GPS) RWY 23",
+          "page": "137"
+        },
+        {
+          "name": "RNAV (GPS) RWY 32",
+          "page": "138"
+        },
+        {
+          "name": "COPTER ILS Y OR LOC Y RWY 23",
+          "page": "139"
+        },
+        {
+          "name": "COPTER ILS Y OR LOC Y RWY 32",
+          "page": "140"
+        }
+      ],
+      "diagram": [
+        {
+          "name": "AIRPORT DIAGRAM",
+          "page": "141"
+        }
+      ]
+    }
+  },
+  "5B6": {
+    "name": "FALMOUTH AIRPARK",
+    "code": "5B6",
+    "plates": {
+      "approach": [
+        {
+          "name": "RNAV (GPS) RWY 07",
+          "page": "142"
+        },
+        {
+          "name": "RNAV (GPS) RWY 25",
+          "page": "143"
+        }
+      ],
+      "diagram": [
+        {
+          "name": "AIRPORT DIAGRAM",
+          "page": "144"
+        }
+      ]
+    }
+  },
+  "FIT": {
+    "name": "FITCHBURG MUNI",
+    "code": "FIT",
+    "plates": {
+      "approach": [
+        {
+          "name": "RNAV (GPS) RWY 14",
+          "page": "145"
+        },
+        {
+          "name": "RNAV (GPS) RWY 32",
+          "page": "146"
+        }
+      ]
+    }
+  },
+  "FVE": {
+    "name": "NORTHERN AROOSTOOK RGNL",
+    "code": "FVE",
+    "plates": {
+      "approach": [
+        {
+          "name": "RNAV (GPS) RWY 14",
+          "page": "147"
+        },
+        {
+          "name": "RNAV (GPS) RWY 32",
+          "page": "148"
+        }
+      ]
+    }
+  },
+  "5B9": {
+    "name": "DEAN MEML",
+    "code": "5B9",
+    "plates": {
+      "approach": [
+        {
+          "name": "RNAV (GPS) RWY 19",
+          "page": "171"
+        }
+      ]
+    }
+  },
+  "FSO": {
+    "name": "FRANKLIN COUNTY STATE",
+    "code": "FSO",
+    "plates": {
+      "approach": [
+        {
+          "name": "RNAV (GPS) RWY 01",
+          "page": "172"
+        },
+        {
+          "name": "RNAV (GPS) RWY 19",
+          "page": "173"
+        }
+      ]
+    }
+  },
+  "1B6": {
+    "name": "HOPEDALE INDUSTRIAL PARK",
+    "code": "1B6",
+    "plates": {
+      "approach": [
+        {
+          "name": "RNAV (GPS)-A",
+          "page": "174"
+        }
+      ]
+    }
+  },
+  "HUL": {
+    "name": "HOULTON INTL",
+    "code": "HUL",
+    "plates": {
+      "approach": [
+        {
+          "name": "RNAV (GPS) RWY 05",
+          "page": "175"
+        },
+        {
+          "name": "RNAV (GPS) RWY 23",
+          "page": "176"
+        }
+      ],
+      "diagram": [
+        {
+          "name": "AIRPORT DIAGRAM",
+          "page": "177"
+        }
+      ]
+    }
+  },
+  "HYA": {
+    "name": "CAPE COD GATEWAY",
+    "code": "HYA",
+    "plates": {
+      "approach": [
+        {
+          "name": "ILS OR LOC RWY 15",
+          "page": "178"
+        },
+        {
+          "name": "ILS OR LOC RWY 24",
+          "page": "179"
+        },
+        {
+          "name": "RNAV (GPS) RWY 06",
+          "page": "180"
+        },
+        {
+          "name": "RNAV (GPS) RWY 15",
+          "page": "181"
+        },
+        {
+          "name": "RNAV (GPS) RWY 24",
+          "page": "182"
+        },
+        {
+          "name": "RNAV (GPS) RWY 33",
+          "page": "183"
+        },
+        {
+          "name": "VOR RWY 06",
+          "page": "184"
+        }
+      ],
+      "diagram": [
+        {
+          "name": "AIRPORT DIAGRAM",
+          "page": "185"
+        }
+      ]
+    }
+  },
+  "59B": {
+    "name": "NEWTON FLD",
+    "code": "59B",
+    "plates": {
+      "approach": [
+        {
+          "name": "RNAV (GPS) RWY 13",
+          "page": "186"
+        },
+        {
+          "name": "RNAV (GPS) RWY 31",
+          "page": "187"
+        }
+      ]
+    }
+  },
+  "AFN": {
+    "name": "JAFFREY AIRFIELD SILVER RANCH",
+    "code": "AFN",
+    "plates": {
+      "approach": [
+        {
+          "name": "RNAV (GPS)-B",
+          "page": "188"
+        },
+        {
+          "name": "RNAV (GPS)-C",
+          "page": "189"
+        }
+      ]
+    }
+  },
+  "EEN": {
+    "name": "DILLANT/HOPKINS",
+    "code": "EEN",
+    "plates": {
+      "approach": [
+        {
+          "name": "ILS OR LOC RWY 02",
+          "page": "190"
+        },
+        {
+          "name": "RNAV (GPS) RWY 02",
+          "page": "191"
+        }
+      ],
+      "diagram": [
+        {
+          "name": "AIRPORT DIAGRAM",
+          "page": "192"
+        }
+      ]
+    }
+  },
+  "MHT": {
+    "name": "MANCHESTER BOSTON RGNL",
+    "code": "MHT",
+    "plates": {
+      "star": [
+        {
+          "name": "ROZZE TWO (RNAV)",
+          "page": "Z18"
+        }
+      ],
+      "approach": [
+        {
+          "name": "ILS OR LOC RWY 06",
+          "page": "214"
+        },
+        {
+          "name": "ILS OR LOC RWY 17",
+          "page": "215"
+        },
+        {
+          "name": "ILS OR LOC RWY 35",
+          "page": "216"
+        },
+        {
+          "name": "ILS RWY 35 (SA CAT I)",
+          "page": "217"
+        },
+        {
+          "name": "ILS RWY 35 (CAT II - III)",
+          "page": "218"
+        },
+        {
+          "name": "RNAV (RNP) Z RWY 17",
+          "page": "219"
+        },
+        {
+          "name": "RNAV (RNP) Z RWY 35",
+          "page": "220"
+        },
+        {
+          "name": "RNAV (GPS) RWY 06",
+          "page": "221"
+        },
+        {
+          "name": "RNAV (GPS) RWY 24",
+          "page": "222"
+        },
+        {
+          "name": "RNAV (GPS) Y RWY 17",
+          "page": "223"
+        },
+        {
+          "name": "RNAV (GPS) Y RWY 35",
+          "page": "224"
+        }
+      ],
+      "diagram": [
+        {
+          "name": "AIRPORT DIAGRAM",
+          "page": "225"
+        }
+      ],
+      "departure": [
+        {
+          "name": "MANCHESTER ONE",
+          "page": "226"
+        },
+        {
+          "name": "PPORT FOUR (RNAV)",
+          "page": "227"
+        }
+      ]
+    }
+  },
+  "1B9": {
+    "name": "MANSFIELD MUNI",
+    "code": "1B9",
+    "plates": {
+      "star": [
+        {
+          "name": "WOONS TWO",
+          "page": "Z26"
+        }
+      ],
+      "approach": [
+        {
+          "name": "RNAV (GPS) RWY 32",
+          "page": "228"
+        },
+        {
+          "name": "RNAV (GPS) Z RWY 14",
+          "page": "229"
+        },
+        {
+          "name": "COPTER RNAV (GPS) Y RWY 14",
+          "page": "230"
+        }
+      ]
+    }
+  },
+  "GHG": {
+    "name": "MARSHFIELD MUNI - GEORGE HARLOW FLD",
+    "code": "GHG",
+    "plates": {
+      "star": [
+        {
+          "name": "WOONS TWO",
+          "page": "Z26"
+        }
+      ],
+      "approach": [
+        {
+          "name": "RNAV (GPS) RWY 06",
+          "page": "231"
+        },
+        {
+          "name": "RNAV (GPS) RWY 24",
+          "page": "232"
+        }
+      ]
+    }
+  },
+  "MMK": {
+    "name": "MERIDEN MARKHAM MUNI",
+    "code": "MMK",
+    "plates": {
+      "approach": [
+        {
+          "name": "RNAV (GPS) RWY 36",
+          "page": "233"
+        },
+        {
+          "name": "VOR RWY 36",
+          "page": "234"
+        }
+      ]
+    }
+  },
+  "MLT": {
+    "name": "MILLINOCKET MUNI",
+    "code": "MLT",
+    "plates": {
+      "approach": [
+        {
+          "name": "RNAV (GPS) RWY 11",
+          "page": "235"
+        },
+        {
+          "name": "RNAV (GPS) RWY 29",
+          "page": "236"
+        },
+        {
+          "name": "VOR RWY 29",
+          "page": "237"
+        }
+      ]
+    }
+  },
+  "0B5": {
+    "name": "TURNERS FALLS",
+    "code": "0B5",
+    "plates": {
+      "approach": [
+        {
+          "name": "RNAV (GPS)-B",
+          "page": "238"
+        }
+      ]
+    }
+  },
+  "HVN": {
+    "name": "TWEED/NEW HAVEN",
+    "code": "HVN",
+    "plates": {
+      "star": [
+        {
+          "name": "DENNA ONE (RNAV)",
+          "page": "Z4"
+        },
+        {
+          "name": "SARDI ONE (RNAV)",
+          "page": "Z20"
+        }
+      ],
+      "approach": [
+        {
+          "name": "ILS OR LOC RWY 02",
+          "page": "264"
+        },
+        {
+          "name": "RNAV (GPS) RWY 02",
+          "page": "265"
+        },
+        {
+          "name": "RNAV (GPS) RWY 20",
+          "page": "266"
+        }
+      ],
+      "diagram": [
+        {
+          "name": "AIRPORT DIAGRAM",
+          "page": "267"
+        }
+      ],
+      "departure": [
+        {
+          "name": "BRIDGEHAVEN ONE",
+          "page": "268"
+        }
+      ]
+    }
+  },
+  "2B3": {
+    "name": "PARLIN FLD",
+    "code": "2B3",
+    "plates": {
+      "approach": [
+        {
+          "name": "RNAV (GPS)-A",
+          "page": "269"
+        }
+      ]
+    }
+  },
+  "UUU": {
+    "name": "NEWPORT STATE",
+    "code": "UUU",
+    "plates": {
+      "star": [
+        {
+          "name": "WIPOR FOUR (RNAV)",
+          "page": "Z25"
+        }
+      ],
+      "approach": [
+        {
+          "name": "RNAV (GPS) RWY 16",
+          "page": "270"
+        },
+        {
+          "name": "LOC RWY 22",
+          "page": "271"
+        },
+        {
+          "name": "VOR/DME RWY 16",
+          "page": "272"
+        }
+      ]
+    }
+  },
+  "EFK": {
+    "name": "NORTHEAST KINGDOM INTL",
+    "code": "EFK",
+    "plates": {
+      "approach": [
+        {
+          "name": "RNAV (GPS) RWY 36",
+          "page": "273"
+        }
+      ]
+    }
+  },
+  "OWK": {
+    "name": "CENTRAL MAINE/NORRIDGEWOCK",
+    "code": "OWK",
+    "plates": {
+      "approach": [
+        {
+          "name": "RNAV (GPS) RWY 03",
+          "page": "274"
+        },
+        {
+          "name": "RNAV (GPS) RWY 15",
+          "page": "275"
+        }
+      ]
+    }
+  },
+  "AQW": {
+    "name": "HARRIMAN-AND-WEST",
+    "code": "AQW",
+    "plates": {
+      "approach": [
+        {
+          "name": "RNAV (GPS)-A",
+          "page": "276"
+        },
+        {
+          "name": "RNAV (GPS)-B",
+          "page": "277"
+        }
+      ]
+    }
+  },
+  "OQU": {
+    "name": "QUONSET STATE",
+    "code": "OQU",
+    "plates": {
+      "star": [
+        {
+          "name": "WIPOR FOUR (RNAV)",
+          "page": "Z25"
+        }
+      ],
+      "approach": [
+        {
+          "name": "RNAV (GPS) RWY 16",
+          "page": "278"
+        },
+        {
+          "name": "RNAV (GPS) RWY 34",
+          "page": "279"
+        },
+        {
+          "name": "LOC RWY 16",
+          "page": "280"
+        },
+        {
+          "name": "VOR RWY 34",
+          "page": "281"
+        },
+        {
+          "name": "VOR-A",
+          "page": "282"
+        }
+      ],
+      "diagram": [
+        {
+          "name": "AIRPORT DIAGRAM",
+          "page": "283"
+        }
+      ]
+    }
+  },
+  "SFZ": {
+    "name": "NORTH CENTRAL STATE",
+    "code": "SFZ",
+    "plates": {
+      "star": [
+        {
+          "name": "WIPOR FOUR (RNAV)",
+          "page": "Z25"
+        }
+      ],
+      "approach": [
+        {
+          "name": "RNAV (GPS) RWY 05",
+          "page": "303"
+        },
+        {
+          "name": "RNAV (GPS) RWY 23",
+          "page": "304"
+        },
+        {
+          "name": "LOC RWY 05",
+          "page": "305"
+        },
+        {
+          "name": "VOR-A",
+          "page": "306"
+        }
+      ]
+    }
+  },
+  "PSF": {
+    "name": "PITTSFIELD MUNI",
+    "code": "PSF",
+    "plates": {
+      "approach": [
+        {
+          "name": "RNAV (GPS) RWY 08",
+          "page": "307"
+        },
+        {
+          "name": "RNAV (GPS) RWY 26",
+          "page": "308"
+        },
+        {
+          "name": "LOC RWY 26",
+          "page": "309"
+        }
+      ]
+    }
+  },
+  "2B7": {
+    "name": "PITTSFIELD MUNI",
+    "code": "2B7",
+    "plates": {
+      "approach": [
+        {
+          "name": "RNAV (GPS) RWY 18",
+          "page": "310"
+        },
+        {
+          "name": "RNAV (GPS) RWY 36",
+          "page": "311"
+        }
+      ]
+    }
+  },
+  "4B8": {
+    "name": "ROBERTSON FLD",
+    "code": "4B8",
+    "plates": {
+      "approach": [
+        {
+          "name": "RNAV (GPS) RWY 02",
+          "page": "312"
+        },
+        {
+          "name": "RNAV (GPS) RWY 20",
+          "page": "313"
+        }
+      ]
+    }
+  },
+  "PYM": {
+    "name": "PLYMOUTH MUNI",
+    "code": "PYM",
+    "plates": {
+      "star": [
+        {
+          "name": "WIPOR FOUR (RNAV)",
+          "page": "Z25"
+        }
+      ],
+      "approach": [
+        {
+          "name": "ILS OR LOC RWY 06",
+          "page": "314"
+        },
+        {
+          "name": "RNAV (GPS) RWY 06",
+          "page": "315"
+        },
+        {
+          "name": "RNAV (GPS) RWY 15",
+          "page": "316"
+        },
+        {
+          "name": "RNAV (GPS) RWY 24",
+          "page": "317"
+        },
+        {
+          "name": "RNAV (GPS) RWY 33",
+          "page": "318"
+        }
+      ]
+    }
+  },
+  "PVD": {
+    "name": "RHODE ISLAND TF GREEN INTL",
+    "code": "PVD",
+    "plates": {
+      "star": [
+        {
+          "name": "JORDN TWO (RNAV)",
+          "page": "Z10"
+        },
+        {
+          "name": "WIPOR FOUR (RNAV)",
+          "page": "Z25"
+        }
+      ],
+      "approach": [
+        {
+          "name": "ILS OR LOC RWY 05",
+          "page": "347"
+        },
+        {
+          "name": "ILS OR LOC RWY 23",
+          "page": "348"
+        },
+        {
+          "name": "ILS OR LOC RWY 34",
+          "page": "349"
+        },
+        {
+          "name": "ILS RWY 23 (SA CAT I - II)",
+          "page": "350"
+        },
+        {
+          "name": "ILS RWY 05 (CAT II - III)",
+          "page": "351"
+        },
+        {
+          "name": "RNAV (RNP) Z RWY 23",
+          "page": "352"
+        },
+        {
+          "name": "RNAV (GPS) RWY 05",
+          "page": "353"
+        },
+        {
+          "name": "RNAV (GPS) RWY 16",
+          "page": "354"
+        },
+        {
+          "name": "RNAV (GPS) RWY 34",
+          "page": "355"
+        },
+        {
+          "name": "RNAV (GPS) Y RWY 23",
+          "page": "356"
+        },
+        {
+          "name": "VOR RWY 05",
+          "page": "357"
+        }
+      ],
+      "diagram": [
+        {
+          "name": "AIRPORT DIAGRAM",
+          "page": "358"
+        }
+      ]
+    }
+  },
+  "PVC": {
+    "name": "PROVINCETOWN MUNI",
+    "code": "PVC",
+    "plates": {
+      "approach": [
+        {
+          "name": "ILS OR LOC RWY 07",
+          "page": "359"
+        },
+        {
+          "name": "RNAV (GPS) RWY 07",
+          "page": "360"
+        },
+        {
+          "name": "RNAV (GPS) RWY 25",
+          "page": "361"
+        }
+      ]
+    }
+  },
+  "M57": {
+    "name": "RANGELEY LAKE",
+    "code": "M57",
+    "plates": {
+      "approach": [
+        {
+          "name": "RNAV (GPS)-C",
+          "page": "362"
+        }
+      ]
+    }
+  },
+  "8B0": {
+    "name": "STEPHEN A BEAN MUNI",
+    "code": "8B0",
+    "plates": {
+      "approach": [
+        {
+          "name": "RNAV (GPS) RWY 14",
+          "page": "364"
+        },
+        {
+          "name": "RNAV (GPS) RWY 32",
+          "page": "365"
+        },
+        {
+          "name": "RNAV (GPS)-D",
+          "page": "366"
+        }
+      ]
+    }
+  },
+  "DAW": {
+    "name": "SKYHAVEN",
+    "code": "DAW",
+    "plates": {
+      "approach": [
+        {
+          "name": "RNAV (GPS) RWY 15",
+          "page": "367"
+        },
+        {
+          "name": "RNAV (GPS) RWY 33",
+          "page": "368"
+        }
+      ]
+    }
+  },
+  "RKD": {
+    "name": "KNOX COUNTY RGNL",
+    "code": "RKD",
+    "plates": {
+      "approach": [
+        {
+          "name": "ILS OR LOC RWY 13",
+          "page": "369"
+        },
+        {
+          "name": "RNAV (GPS) RWY 03",
+          "page": "370"
+        },
+        {
+          "name": "RNAV (GPS) RWY 13",
+          "page": "371"
+        },
+        {
+          "name": "RNAV (GPS) RWY 31",
+          "page": "372"
+        }
+      ]
+    }
+  },
+  "MVY": {
+    "name": "ARTHA'S VINEYARD",
+    "code": "MVY",
+    "plates": {}
+  },
+  "WVL": {
+    "name": "ATERVILLE RGNL",
+    "code": "WVL",
+    "plates": {}
+  },
+  "WST": {
+    "name": "ESTERLY STATE",
+    "code": "WST",
+    "plates": {}
+  },
+  "BAF": {
+    "name": "ESTFIELD-BARNES RGNL",
+    "code": "BAF",
+    "plates": {}
+  },
+  "BDL": {
+    "name": "BRADLEY INTL",
+    "code": "BDL",
+    "plates": {
+      "star": [
+        {
+          "name": "DEER PARK THREE",
+          "page": "Z3"
+        },
+        {
+          "name": "STELA ONE (RNAV)",
+          "page": "Z23"
+        }
+      ],
+      "approach": [
+        {
+          "name": "ILS OR LOC RWY 06",
+          "page": "421"
+        },
+        {
+          "name": "ILS OR LOC RWY 24",
+          "page": "422"
+        },
+        {
+          "name": "ILS OR LOC RWY 33",
+          "page": "423"
+        },
+        {
+          "name": "ILS RWY 06 (SA CAT I)",
+          "page": "424"
+        },
+        {
+          "name": "ILS RWY 24 (SA CAT I - II)",
+          "page": "425"
+        },
+        {
+          "name": "ILS RWY 06 (CAT II - III)",
+          "page": "426"
+        },
+        {
+          "name": "RNAV (RNP) Z RWY 06",
+          "page": "427"
+        },
+        {
+          "name": "RNAV (RNP) Z RWY 24",
+          "page": "428"
+        },
+        {
+          "name": "RNAV (GPS) RWY 15",
+          "page": "429"
+        },
+        {
+          "name": "RNAV (GPS) RWY 33",
+          "page": "430"
+        },
+        {
+          "name": "RNAV (GPS) Y RWY 06",
+          "page": "431"
+        },
+        {
+          "name": "RNAV (GPS) Y RWY 24",
+          "page": "432"
+        },
+        {
+          "name": "COPTER ILS OR LOC RWY 06",
+          "page": "433"
+        }
+      ],
+      "diagram": [
+        {
+          "name": "AIRPORT DIAGRAM",
+          "page": "434"
+        }
+      ],
+      "departure": [
+        {
+          "name": "BRADLEY SIX",
+          "page": "435"
+        },
+        {
+          "name": "THUMB ONE (RNAV)",
+          "page": "436"
+        }
+      ]
+    }
+  },
+  "IWI": {
+    "name": "WISCASSET",
+    "code": "IWI",
+    "plates": {
+      "approach": [
+        {
+          "name": "RNAV (GPS) RWY 07",
+          "page": "437"
+        },
+        {
+          "name": "RNAV (GPS) RWY 25",
+          "page": "438"
+        }
+      ]
+    }
+  },
+  "ORH": {
+    "name": "WORCESTER RGNL",
+    "code": "ORH",
+    "plates": {
+      "star": [
+        {
+          "name": "STELA ONE (RNAV)",
+          "page": "Z23"
+        }
+      ],
+      "approach": [
+        {
+          "name": "ILS OR LOC RWY 11",
+          "page": "439"
+        },
+        {
+          "name": "ILS OR LOC RWY 29",
+          "page": "440"
+        },
+        {
+          "name": "ILS RWY 11 (CAT II - III)",
+          "page": "441"
+        },
+        {
+          "name": "RNAV (GPS) RWY 11",
+          "page": "442"
+        },
+        {
+          "name": "RNAV (GPS) RWY 29",
+          "page": "443"
+        },
+        {
+          "name": "RNAV (GPS) RWY 33",
+          "page": "444"
+        },
+        {
+          "name": "VOR/DME RWY 33",
+          "page": "445"
+        }
+      ],
+      "diagram": [
+        {
+          "name": "AIRPORT DIAGRAM",
+          "page": "446"
+        }
+      ]
+    }
+  }
+}

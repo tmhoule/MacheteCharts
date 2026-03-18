@@ -1,0 +1,15 @@
+{
+  "dependencies": [],
+  "content_type": "MISC",
+  "title": "Machete Charts",
+  "manufacturer": "",
+  "creator": "Machete",
+  "package_version": "1.0.0",
+  "minimum_game_version": "1.19.8",
+  "release_notes": {
+    "neutral": {
+      "LastUpdate": "",
+      "OlderHistory": ""
+    }
+  }
+}

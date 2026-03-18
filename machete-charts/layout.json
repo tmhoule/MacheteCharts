@@ -1,0 +1,39 @@
+{
+  "content": [
+    {
+      "path": "manifest.json",
+      "size": 290,
+      "date": 0
+    },
+    {
+      "path": "InGamePanels/machete-charts.spb",
+      "size": 632,
+      "date": 0
+    },
+    {
+      "path": "html_ui/InGamePanels/MacheteCharts/MacheteCharts.css",
+      "size": 8460,
+      "date": 0
+    },
+    {
+      "path": "html_ui/InGamePanels/MacheteCharts/MacheteCharts.html",
+      "size": 1867,
+      "date": 0
+    },
+    {
+      "path": "html_ui/InGamePanels/MacheteCharts/MacheteCharts.js",
+      "size": 14875,
+      "date": 0
+    },
+    {
+      "path": "html_ui/InGamePanels/MacheteCharts/charts.json",
+      "size": 51068,
+      "date": 0
+    },
+    {
+      "path": "html_ui/icons/toolbar/ICON_TOOLBAR_MACHETE_CHARTS.svg",
+      "size": 952,
+      "date": 0
+    }
+  ]
+}
