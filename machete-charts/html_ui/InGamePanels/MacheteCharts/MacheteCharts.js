@@ -116,11 +116,11 @@ class MacheteChartsPanel extends TemplateElement {
     osk.classList.remove('visible');
   });
 
-  // Load charts.json — try coui:// (MSFS), then relative (local dev), then remote fallback
+  // Load charts.json — try coui:// (MSFS), then relative (local dev), then LAN server
   const chartsUrls = [
     'coui://html_ui/InGamePanels/MacheteCharts/charts.json',
     'charts.json',
-    'https://hermes-tv.com/MacheteCharts/charts.json'
+    'http://192.168.1.10/MacheteCharts/charts.json'
   ];
   (function tryLoad(i) {
     if (i >= chartsUrls.length) {
@@ -391,8 +391,9 @@ class MacheteChartsPanel extends TemplateElement {
     state.view = 'plate';
     state.plate = page;
 
-    // Determine image path (remote-hosted)
-    const imgSrc = 'https://hermes-tv.com/MacheteCharts/charts/' + page.toLowerCase() + '.jpg';
+    // Determine image path (LAN server, organized by volume)
+    const volume = chartsData[state.airport].volume;
+    const imgSrc = 'http://192.168.1.10/MacheteCharts/charts/' + volume + '/' + page + '.jpg';
 
     // Build plate viewer overlay
     const viewer = document.createElement('div');
