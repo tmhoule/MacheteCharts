@@ -39,6 +39,9 @@ html, body {
   -webkit-font-smoothing: antialiased;
 }
 
+/* #app fontSize is set by JS (uiScale %). All child font-sizes
+   that use em will scale relative to it. */
+
 #app {
   display: flex;
   flex-direction: column;
@@ -57,12 +60,44 @@ html, body {
   flex-shrink: 0;
 }
 
+.header-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
 .header h1 {
   font-size: 15px;
   font-weight: 700;
   color: var(--accent);
   letter-spacing: 0.04em;
   text-transform: uppercase;
+}
+
+.text-size-controls {
+  display: flex;
+  gap: 4px;
+}
+
+.text-size-controls button {
+  padding: 6px 12px;
+  background: var(--btn-bg);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  color: var(--text);
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.12s;
+}
+
+.text-size-controls button:hover {
+  background: var(--btn-hover);
+}
+
+.text-size-controls button:active {
+  background: var(--btn-active);
+  transform: scale(0.95);
 }
 
 .search-wrapper {
@@ -459,4 +494,60 @@ html, body {
 
 ::-webkit-scrollbar-thumb:hover {
   background: var(--text-dim);
+}
+
+/* ── On-screen keyboard ── */
+.osk {
+  display: none;
+  flex-shrink: 0;
+  background: var(--surface);
+  border-top: 1px solid var(--border);
+  padding: 8px;
+}
+
+.osk.visible {
+  display: block;
+}
+
+.osk-row {
+  display: flex;
+  justify-content: center;
+  gap: 4px;
+  margin-bottom: 4px;
+}
+
+.osk-row:last-child {
+  margin-bottom: 0;
+}
+
+.osk-key {
+  min-width: 36px;
+  height: 42px;
+  background: var(--btn-bg);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  color: var(--text);
+  font-size: 18px;
+  font-weight: 600;
+  font-family: 'SF Mono', 'Consolas', 'Liberation Mono', monospace;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.1s;
+}
+
+.osk-key:hover {
+  background: var(--btn-hover);
+}
+
+.osk-key:active {
+  background: var(--accent);
+  color: #fff;
+  transform: scale(0.94);
+}
+
+.osk-key.wide {
+  min-width: 72px;
+  font-size: 14px;
 }

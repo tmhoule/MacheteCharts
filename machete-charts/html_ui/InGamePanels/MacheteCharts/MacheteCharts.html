@@ -22,7 +22,13 @@
     <ingame-ui id="MacheteChartsPanel" panel-id="MACHETE_CHARTS_PANEL" title="Machete Charts" class="ingameUiFrame panelInvisible" content-fit="true">
       <div id="app">
         <div class="header">
-          <h1>Machete Charts</h1>
+          <div class="header-top">
+            <h1>Machete Charts</h1>
+            <div class="text-size-controls">
+              <button id="textSmaller" title="Smaller text">A&minus;</button>
+              <button id="textBigger" title="Bigger text">A+</button>
+            </div>
+          </div>
           <div class="search-wrapper">
             <div class="search-box">
               <input type="text" id="searchInput" placeholder="Airport ID (e.g. BOS)" maxlength="4" autocomplete="off" spellcheck="false">
@@ -31,6 +37,7 @@
             <div class="search-results" id="searchResults"></div>
           </div>
         </div>
+        <div class="osk" id="onScreenKeyboard"></div>
         <div class="content" id="content">
           <div class="empty-state">
             <h2>NE Vol 1</h2>

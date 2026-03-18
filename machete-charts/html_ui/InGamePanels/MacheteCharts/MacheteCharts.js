@@ -34,6 +34,75 @@ class MacheteChartsPanel extends TemplateElement {
     try { Coherent.trigger('UNFOCUS_INPUT_FIELD', '', '', '', ''); } catch(e) {}
   });
 
+  // ── Text size controls ──
+  var uiScale = 100;
+  try { var saved = localStorage.getItem('machete_ui_scale'); if (saved) uiScale = parseInt(saved); } catch(e) {}
+  var appEl = document.getElementById('app');
+  function applyUiScale() {
+    appEl.style.fontSize = uiScale + '%';
+    try { localStorage.setItem('machete_ui_scale', uiScale); } catch(e) {}
+  }
+  applyUiScale();
+  document.getElementById('textBigger').addEventListener('click', function () {
+    uiScale = Math.min(200, uiScale + 15);
+    applyUiScale();
+  });
+  document.getElementById('textSmaller').addEventListener('click', function () {
+    uiScale = Math.max(60, uiScale - 15);
+    applyUiScale();
+  });
+
+  // ── On-screen keyboard ──
+  var osk = document.getElementById('onScreenKeyboard');
+  var oskRows = [
+    ['1','2','3','4','5','6','7','8','9','0'],
+    ['Q','W','E','R','T','Y','U','I','O','P'],
+    ['A','S','D','F','G','H','J','K','L'],
+    ['Z','X','C','V','B','N','M','DEL']
+  ];
+  var oskHtml = '';
+  oskRows.forEach(function (row) {
+    oskHtml += '<div class="osk-row">';
+    row.forEach(function (key) {
+      var cls = key === 'DEL' ? 'osk-key wide' : 'osk-key';
+      var label = key === 'DEL' ? '&larr; Del' : key;
+      oskHtml += '<button class="' + cls + '" data-key="' + key + '">' + label + '</button>';
+    });
+    oskHtml += '</div>';
+  });
+  osk.innerHTML = oskHtml;
+
+  // Show/hide keyboard when input is tapped
+  searchInput.addEventListener('click', function () {
+    osk.classList.add('visible');
+  });
+
+  // Also allow physical keyboard input when available
+  searchInput.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') {
+      osk.classList.remove('visible');
+      searchInput.blur();
+    }
+  });
+
+  // Handle on-screen key presses
+  osk.addEventListener('click', function (e) {
+    var btn = e.target.closest('.osk-key');
+    if (!btn) return;
+    var key = btn.dataset.key;
+    if (key === 'DEL') {
+      searchInput.value = searchInput.value.slice(0, -1);
+    } else if (searchInput.value.length < 4) {
+      searchInput.value += key;
+    }
+    onSearchInput();
+  });
+
+  // Close keyboard when clicking content area or selecting a result
+  contentEl.addEventListener('click', function () {
+    osk.classList.remove('visible');
+  });
+
   // Load charts.json — try coui:// (MSFS), then relative (local dev), then remote fallback
   const chartsUrls = [
     'coui://html_ui/InGamePanels/MacheteCharts/charts.json',
@@ -116,6 +185,7 @@ class MacheteChartsPanel extends TemplateElement {
       el.addEventListener('click', function () {
         selectAirport(this.dataset.code);
         searchResults.classList.remove('visible');
+        osk.classList.remove('visible');
       });
     });
   }
@@ -123,6 +193,7 @@ class MacheteChartsPanel extends TemplateElement {
   function doSearch() {
     let q = searchInput.value.trim().toUpperCase();
     searchResults.classList.remove('visible');
+    osk.classList.remove('visible');
     if (!chartsData || !q) return;
 
     const qNorm = normalizeCode(q);
