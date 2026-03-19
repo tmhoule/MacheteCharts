@@ -76,8 +76,7 @@ class MacheteChartsPanel extends TemplateElement {
 
   // ── Close panel button ──
   document.getElementById('closePanel').addEventListener('click', function () {
-    var panel = document.getElementById('MacheteChartsPanel');
-    if (panel && panel.close) panel.close();
+    try { Coherent.trigger('PANEL_SERVICE_SET_PANEL_VISIBILITY', 'MACHETE_CHARTS_PANEL', false); } catch(e) {}
   });
 
   // ── On-screen keyboard ──

@@ -64,9 +64,11 @@ html, body {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 0.44em;
 }
 
 .header h1 {
+  flex: 1;
   font-size: 0.83em;
   font-weight: 700;
   color: var(--accent);
@@ -100,15 +102,21 @@ html, body {
   transform: scale(0.95);
 }
 
-.text-size-controls button#closePanel {
+/* ── Close panel button (in header-top row) ── */
+#closePanel {
+  padding: 0.33em 0.56em;
   background: transparent;
-  border-color: var(--border);
+  border: 1px solid var(--border);
+  border-radius: 6px;
   color: var(--text-dim);
-  font-size: 1.1em;
+  font-size: 0.78em;
+  font-weight: 700;
+  cursor: pointer;
   line-height: 1;
+  flex-shrink: 0;
 }
 
-.text-size-controls button#closePanel:hover {
+#closePanel:hover {
   background: #c53030;
   border-color: #c53030;
   color: #fff;
@@ -182,22 +190,6 @@ html, body {
   transform: scale(0.97);
 }
 
-.search-box button#clearBtn {
-  background: var(--btn-bg);
-  color: var(--text-dim);
-  border: 1px solid var(--border);
-  font-size: 0.89em;
-  padding: 0.56em 0.78em;
-}
-
-.search-box button#clearBtn:hover {
-  background: var(--btn-hover);
-  color: var(--text);
-}
-
-.search-box button#clearBtn:active {
-  background: var(--btn-active);
-}
 
 /* ── Content area ── */
 .content {
