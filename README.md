@@ -2,6 +2,8 @@
 
 Free FAA terminal procedure charts inside Microsoft Flight Simulator. View airport diagrams, instrument approaches, SIDs, and STARs without leaving the cockpit.
 
+![Machete Charts](docs/screenshot.png)
+
 ## What It Does
 
 Machete Charts adds an in-game panel to MSFS that lets you search and view FAA chart plates for **3,193 US airports** — the same charts published in the FAA's digital Terminal Procedures Publication (d-TPP).
