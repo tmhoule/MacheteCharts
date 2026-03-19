@@ -166,11 +166,11 @@ class MacheteChartsPanel extends TemplateElement {
     osk.classList.remove('visible');
   });
 
-  // Load charts.json — try coui:// (MSFS), then relative (local dev), then remote
+  // Load charts.json — try remote first (has all US airports), fall back to local
   const chartsUrls = [
+    'https://hermes-tv.com/MacheteCharts/charts.json',
     'coui://html_ui/InGamePanels/MacheteCharts/charts.json',
-    'charts.json',
-    'https://hermes-tv.com/MacheteCharts/charts.json'
+    'charts.json'
   ];
   (function tryLoad(i) {
     if (i >= chartsUrls.length) {
