@@ -433,8 +433,9 @@ class MacheteChartsPanel extends TemplateElement {
     state.plate = page;
 
     // Determine image path (organized by volume)
-    const volume = chartsData[state.airport].volume;
+    const volume = airport.volume;
     const imgSrc = 'https://hermes-tv.com/MacheteCharts/charts/' + volume + '/' + page + '.jpg';
+    console.log('Loading chart: ' + imgSrc);
 
     // Build plate viewer overlay
     const viewer = document.createElement('div');
@@ -448,14 +449,17 @@ class MacheteChartsPanel extends TemplateElement {
       `<button id="plateReset">Fit</button>` +
       `</div>` +
       `<div class="plate-container" id="plateContainer">` +
-      `<div id="plateLoading" style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:#ccc;font-size:1.2em;">Loading...</div>` +
-      `<img id="plateImg" src="${imgSrc}" alt="${escapeHtml(plate.name)}" style="opacity:0;transition:opacity .2s">` +
+      `<div id="plateLoading" style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:#ccc;font-size:1.2em;">Loading chart...</div>` +
+      `<img id="plateImg" alt="${escapeHtml(plate.name)}" style="opacity:0;transition:opacity .2s">` +
       `</div>`;
 
     document.getElementById('app').appendChild(viewer);
 
     const img = document.getElementById('plateImg');
     const container = document.getElementById('plateContainer');
+
+    // Set src after element is in the DOM
+    img.src = imgSrc;
 
     let scale = 1;
     let panX = 0;
@@ -483,8 +487,9 @@ class MacheteChartsPanel extends TemplateElement {
       fitImage();
     });
     img.addEventListener('error', function () {
+      console.error('Failed to load chart: ' + img.src);
       var el = document.getElementById('plateLoading');
-      if (el) el.innerHTML = 'Failed to load chart image.';
+      if (el) el.innerHTML = 'Failed to load chart.<br><span style="font-size:0.7em;color:#666">' + escapeHtml(img.src) + '</span>';
     });
     if (img.complete && img.naturalWidth > 0) {
       document.getElementById('plateLoading').style.display = 'none';
