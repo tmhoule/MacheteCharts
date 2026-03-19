@@ -72,10 +72,11 @@ Or double-click `installer\install.bat`.
 Charts follow the FAA's 28-day AIRAC cycle. To update:
 
 ```bash
+export MACHETE_NAS_HOST=user@your-server-ip
 ./scripts/update-faa-charts.sh
 ```
 
-This downloads the latest d-TPP charts from the FAA, converts them, and uploads to the chart server. Run it within a few days of each new cycle effective date.
+This downloads the latest d-TPP charts from the FAA, converts them to JPG, and uploads to your server via rsync. Run it within a few days of each new cycle effective date. Requires ImageMagick, Ghostscript, and rsync.
 
 ## Uninstall
 

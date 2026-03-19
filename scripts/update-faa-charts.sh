@@ -16,9 +16,9 @@
 set -euo pipefail
 
 # ── Configuration ──
-NAS_HOST="todd@192.168.1.10"
-NAS_CHARTS_DIR="/volume1/web/MacheteCharts/charts"
-NAS_JSON_PATH="/volume1/web/MacheteCharts/charts.json"
+NAS_HOST="${MACHETE_NAS_HOST:?Set MACHETE_NAS_HOST (e.g. user@192.168.1.10)}"
+NAS_CHARTS_DIR="${MACHETE_NAS_CHARTS_DIR:-/volume1/web/MacheteCharts/charts}"
+NAS_JSON_PATH="${MACHETE_NAS_JSON_PATH:-/volume1/web/MacheteCharts/charts.json}"
 WORK_DIR="/tmp/faa_dtpp"
 DPI=150
 JPG_QUALITY=85
@@ -60,8 +60,9 @@ for cmd in python3 magick gs rsync curl; do
 done
 
 # ── Check NAS connectivity ──
-if ! ping -c 1 -t 3 192.168.1.10 &>/dev/null; then
-    echo "ERROR: NAS at 192.168.1.10 is not reachable."
+NAS_IP=$(echo "$NAS_HOST" | cut -d@ -f2)
+if ! ping -c 1 -t 3 "$NAS_IP" &>/dev/null; then
+    echo "ERROR: NAS at $NAS_IP is not reachable."
     exit 1
 fi
 
@@ -258,7 +259,7 @@ echo "=== Done ==="
 echo "  Cycle: $CYCLE"
 echo "  Airports: $(python3 -c "import json; print(len(json.load(open('$CHARTS_JSON'))))")"
 echo "  Charts: $JPG_COUNT"
-echo "  NAS: http://192.168.1.10/MacheteCharts/"
+echo "  NAS: $NAS_HOST"
 echo ""
 echo "  Cached files are in ${WORK_DIR}/${CYCLE}/"
 echo "  To free disk space: rm -rf ${WORK_DIR}/${CYCLE}/pdfs"
