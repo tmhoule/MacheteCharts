@@ -86,14 +86,16 @@ class MacheteChartsPanel extends TemplateElement {
     ['1','2','3','4','5','6','7','8','9','0'],
     ['Q','W','E','R','T','Y','U','I','O','P'],
     ['A','S','D','F','G','H','J','K','L'],
-    ['Z','X','C','V','B','N','M','DEL','GO']
+    ['Z','X','C','V','B','N','M','DEL'],
+    ['UP','DN','GO']
   ];
   var oskHtml = '';
   oskRows.forEach(function (row) {
     oskHtml += '<div class="osk-row">';
     row.forEach(function (key) {
-      var cls = (key === 'DEL' || key === 'GO') ? 'osk-key wide' : 'osk-key';
-      var label = key === 'DEL' ? 'Del' : key === 'GO' ? 'Go' : key;
+      var isWide = (key === 'DEL' || key === 'GO' || key === 'UP' || key === 'DN');
+      var cls = isWide ? 'osk-key wide' : 'osk-key';
+      var label = key === 'DEL' ? 'Del' : key === 'GO' ? 'Go' : key === 'UP' ? '^' : key === 'DN' ? 'v' : key;
       oskHtml += '<button class="' + cls + '" data-key="' + key + '">' + label + '</button>';
     });
     oskHtml += '</div>';
@@ -119,7 +121,29 @@ class MacheteChartsPanel extends TemplateElement {
     if (!btn) return;
     var key = btn.dataset.key;
     if (key === 'GO') {
-      doSearch();
+      // If a dropdown item is highlighted, select it; otherwise do search
+      var items = searchResults.querySelectorAll('.search-result-item');
+      if (highlightIdx >= 0 && items[highlightIdx]) {
+        selectAirport(items[highlightIdx].dataset.code);
+        searchResults.classList.remove('visible');
+        osk.classList.remove('visible');
+      } else {
+        doSearch();
+      }
+      return;
+    } else if (key === 'UP') {
+      var items = searchResults.querySelectorAll('.search-result-item');
+      if (items.length > 0) {
+        highlightIdx = Math.max(highlightIdx - 1, 0);
+        updateHighlight(items);
+      }
+      return;
+    } else if (key === 'DN') {
+      var items = searchResults.querySelectorAll('.search-result-item');
+      if (items.length > 0) {
+        highlightIdx = Math.min(highlightIdx + 1, items.length - 1);
+        updateHighlight(items);
+      }
       return;
     } else if (key === 'DEL') {
       searchInput.value = searchInput.value.slice(0, -1);
@@ -134,11 +158,11 @@ class MacheteChartsPanel extends TemplateElement {
     osk.classList.remove('visible');
   });
 
-  // Load charts.json — try coui:// (MSFS), then relative (local dev), then LAN server
+  // Load charts.json — try coui:// (MSFS), then relative (local dev), then remote
   const chartsUrls = [
     'coui://html_ui/InGamePanels/MacheteCharts/charts.json',
     'charts.json',
-    'http://192.168.1.10/MacheteCharts/charts.json'
+    'https://hermes-tv.com/MacheteCharts/charts.json'
   ];
   (function tryLoad(i) {
     if (i >= chartsUrls.length) {
@@ -190,9 +214,9 @@ class MacheteChartsPanel extends TemplateElement {
     }
   }
 
-  // Close dropdown when clicking outside
+  // Close dropdown when clicking outside (but not when using the on-screen keyboard)
   document.addEventListener('click', function (e) {
-    if (!e.target.closest('.search-wrapper')) {
+    if (!e.target.closest('.search-wrapper') && !e.target.closest('.osk')) {
       searchResults.classList.remove('visible');
     }
   });
@@ -409,9 +433,9 @@ class MacheteChartsPanel extends TemplateElement {
     state.view = 'plate';
     state.plate = page;
 
-    // Determine image path (LAN server, organized by volume)
+    // Determine image path (organized by volume)
     const volume = chartsData[state.airport].volume;
-    const imgSrc = 'http://192.168.1.10/MacheteCharts/charts/' + volume + '/' + page + '.jpg';
+    const imgSrc = 'https://hermes-tv.com/MacheteCharts/charts/' + volume + '/' + page + '.jpg';
 
     // Build plate viewer overlay
     const viewer = document.createElement('div');

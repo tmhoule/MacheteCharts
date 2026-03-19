@@ -596,6 +596,20 @@ html, body {
   font-size: 0.78em;
 }
 
+.osk-key[data-key="UP"],
+.osk-key[data-key="DN"] {
+  background: var(--surface);
+  border-color: var(--border);
+  color: var(--text-dim);
+  font-family: -apple-system, 'Segoe UI', Roboto, sans-serif;
+}
+
+.osk-key[data-key="UP"]:hover,
+.osk-key[data-key="DN"]:hover {
+  background: var(--btn-hover);
+  color: var(--text);
+}
+
 .osk-key[data-key="GO"] {
   background: var(--accent);
   border-color: transparent;
