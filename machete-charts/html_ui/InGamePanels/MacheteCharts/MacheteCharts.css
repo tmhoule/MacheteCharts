@@ -102,26 +102,6 @@ html, body {
   transform: scale(0.95);
 }
 
-/* ── Close panel button (in header-top row) ── */
-#closePanel {
-  padding: 0.33em 0.56em;
-  background: transparent;
-  border: 1px solid var(--border);
-  border-radius: 6px;
-  color: var(--text-dim);
-  font-size: 0.78em;
-  font-weight: 700;
-  cursor: pointer;
-  line-height: 1;
-  flex-shrink: 0;
-}
-
-#closePanel:hover {
-  background: #c53030;
-  border-color: #c53030;
-  color: #fff;
-}
-
 .search-wrapper {
   position: relative;
   flex: 1;

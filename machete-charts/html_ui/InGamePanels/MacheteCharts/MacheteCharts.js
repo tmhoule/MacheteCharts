@@ -74,20 +74,6 @@ class MacheteChartsPanel extends TemplateElement {
       '</div>';
   });
 
-  // ── Close panel button ──
-  document.getElementById('closePanel').addEventListener('click', function () {
-    var panel = document.getElementById('MacheteChartsPanel');
-    // Try all known MSFS InGamePanel close methods
-    try { panel.close(); } catch(e) {}
-    try { panel.closePanelEvent(); } catch(e) {}
-    try { panel.toggleVisibility(); } catch(e) {}
-    try { Coherent.trigger('PANEL_SERVICE_SET_PANEL_VISIBILITY', 'MACHETE_CHARTS_PANEL', false); } catch(e) {}
-    try { Coherent.call('PANEL_SERVICE_SET_PANEL_VISIBILITY', 'MACHETE_CHARTS_PANEL', false); } catch(e) {}
-    try { LaunchFlowEvent('ON_MOUSERECT_HTMLEVENT', 'CLOSE'); } catch(e) {}
-    // Last resort: hide it ourselves
-    if (panel) panel.classList.add('panelInvisible');
-  });
-
   // ── On-screen keyboard ──
   var osk = document.getElementById('onScreenKeyboard');
   var oskRows = [
