@@ -67,8 +67,8 @@ class MacheteChartsPanel extends TemplateElement {
     if (viewer) viewer.remove();
     contentEl.innerHTML =
       '<div class="empty-state">' +
-      '<h2>FAA Terminal Procedures</h2>' +
-      '<div class="region">All US airports</div>' +
+      '<h2>Terminal Procedures</h2>' +
+      '<div class="region">US & European airports</div>' +
       '<p>Enter an airport identifier to view charts.</p>' +
       '<div class="branding">hermes-tv.com</div>' +
       '</div>';
@@ -141,7 +141,7 @@ class MacheteChartsPanel extends TemplateElement {
       return;
     } else if (key === 'DEL') {
       searchInput.value = searchInput.value.slice(0, -1);
-    } else if (searchInput.value.length < 4) {
+    } else if (searchInput.value.length < 5) {
       searchInput.value += key;
     }
     onSearchInput();
