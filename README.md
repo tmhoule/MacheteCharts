@@ -1,23 +1,45 @@
 # Machete Charts
 
-Free FAA terminal procedure charts inside Microsoft Flight Simulator. View airport diagrams, instrument approaches, SIDs, and STARs without leaving the cockpit.
+Free terminal procedure charts for the US and Europe inside Microsoft Flight Simulator. View airport diagrams, instrument approaches, SIDs, and STARs without leaving the cockpit.
 
 ![Machete Charts](docs/screenshot.png)
 
 ## What It Does
 
-Machete Charts adds an in-game panel to MSFS that lets you search and view FAA chart plates for **3,193 US airports** — the same charts published in the FAA's digital Terminal Procedures Publication (d-TPP).
+Machete Charts adds an in-game panel to MSFS that lets you search and view chart plates for **3,900+ airports across 17 countries** — sourced from government-published Aeronautical Information Publications (AIPs).
 
 - **Airport Diagrams** — Taxi layouts for towered and non-towered airports
 - **Instrument Approaches** — ILS, RNAV, VOR, LOC, and visual approaches
 - **Departures (SIDs)** — Standard instrument departure procedures
 - **STARs** — Standard terminal arrival routes
 
-Charts are updated every 28 days to match the FAA's AIRAC cycle.
+Charts are updated every 28 days to match the AIRAC cycle.
+
+### Supported Countries
+
+| Country | Airports | Source |
+|---------|----------|--------|
+| United States | 3,193 | FAA d-TPP |
+| France | 132 | SIA eAIP |
+| Spain | 59 | ENAIRE |
+| Germany | 58 | DFS BasicIFR |
+| UK | 118 | NATS |
+| Norway | 52 | Avinor |
+| Sweden | 45 | LFV |
+| Netherlands | 17 | LVNL |
+| Austria | 21 | Austro Control |
+| Belgium | 50 | skeyes |
+| Denmark | 27 | Naviair |
+| Finland | 24 | ANS Finland |
+| Portugal | 19 | NAV Portugal |
+| Ireland | 9 | AirNav Ireland |
+| Czech Republic | 11 | ANS CR |
+| Poland | 13 | PANSA |
+| Iceland | 14 | Isavia |
 
 ## Features
 
-- Search by FAA identifier (e.g. `BOS`, `JFK`, `LAX`) or airport name
+- Search by FAA identifier (e.g. `BOS`, `JFK`) or ICAO code (e.g. `LFPG`, `EGLL`) or airport name
 - Autocomplete suggestions as you type
 - ICAO K-prefix handled automatically (`KBOS` finds `BOS`)
 - Pan and zoom on chart plates (mouse drag, scroll wheel, pinch)
@@ -78,8 +100,8 @@ Run `installer\uninstall.ps1` or delete the `machete-charts` folder from your MS
 
 ## Credits
 
-Built by [hermes-tv.com](https://hermes-tv.com). Chart data sourced from the FAA's freely available digital Terminal Procedures Publication.
+Built by [hermes-tv.com](https://hermes-tv.com). US chart data sourced from the FAA's freely available digital Terminal Procedures Publication. European charts sourced from government-published Aeronautical Information Publications (AIPs).
 
 ## License
 
-This project is provided as-is for flight simulation use. FAA charts are public domain.
+This project is provided as-is for flight simulation use. FAA charts are public domain. European charts are sourced from freely accessible government AIPs; copyright remains with the respective national aviation authorities.
