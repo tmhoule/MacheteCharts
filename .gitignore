@@ -11,5 +11,8 @@ vs-radio-toolbar/
 # SPB tooling artifacts
 TextDecode.Data.cs
 
+# Personal notes
+notes.txt
+
 # macOS
 .DS_Store

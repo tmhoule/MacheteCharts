@@ -67,17 +67,6 @@ Or double-click `installer\install.bat`.
 - Use **A-** / **A+** to adjust text size — it goes up to 300%
 - Your text size preference is saved between sessions
 
-## Chart Updates
-
-Charts follow the FAA's 28-day AIRAC cycle. To update:
-
-```bash
-export MACHETE_NAS_HOST=user@your-server-ip
-./scripts/update-faa-charts.sh
-```
-
-This downloads the latest d-TPP charts from the FAA, converts them to JPG, and uploads to your server via rsync. Run it within a few days of each new cycle effective date. Requires ImageMagick, Ghostscript, and rsync.
-
 ## Uninstall
 
 Run `installer\uninstall.ps1` or delete the `machete-charts` folder from your MSFS Community folder.
