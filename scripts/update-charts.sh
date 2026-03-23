@@ -78,7 +78,7 @@ mkdir -p "$WORK_DIR"
 # ── Step 1: Download existing charts.json from NAS ──
 echo "=== Step 1: Fetch existing charts.json from NAS ==="
 EXISTING_JSON="${WORK_DIR}/existing_charts.json"
-if scp -q "${NAS_HOST}:${NAS_JSON_PATH}" "$EXISTING_JSON" 2>/dev/null; then
+if scp -O -q "${NAS_HOST}:${NAS_JSON_PATH}" "$EXISTING_JSON" 2>/dev/null; then
     EXISTING_COUNT=$(python3 -c "import json; print(len(json.load(open('$EXISTING_JSON'))))")
     echo "  Loaded $EXISTING_COUNT existing airports."
 else
