@@ -39,7 +39,7 @@ Machete Charts gives you access to **3,900+ airports across 17 countries**, sour
 
 ### Installer (Recommended)
 
-Download **MacheteChartsSetup.exe** from the [latest release](https://github.com/tmhoule/MacheteCharts/releases) and run it. The installer auto-detects your MSFS Community folder.
+Download **MacheteChartsSetup.exe** from the [latest release](https://github.com/tmhoule/MacheteCharts/releases) and run it. The installer auto-detects your MSFS Community folders — if you have both MSFS 2020 and 2024 installed, it will install to both automatically.
 
 ### Manual Install
 
