@@ -41,6 +41,8 @@ class MacheteChartsPanel extends TemplateElement {
   // ── Text size controls ──
   var uiScale = 100;
   try { var saved = localStorage.getItem('machete_ui_scale'); if (saved) uiScale = parseInt(saved); } catch(e) {}
+  var chartInverted = false;
+  try { chartInverted = localStorage.getItem('machete_chart_inverted') === '1'; } catch(e) {}
   var appEl = document.getElementById('app');
   function applyUiScale() {
     appEl.style.fontSize = uiScale + '%';
@@ -439,6 +441,7 @@ class MacheteChartsPanel extends TemplateElement {
       `<div class="plate-toolbar">` +
       `<button id="plateBack">&lt; Back</button>` +
       `<span class="title">${escapeHtml(plate.name)}</span>` +
+      `<button id="plateInvert" class="${chartInverted ? 'active' : ''}">Invert</button>` +
       `<button id="plateZoomOut">-</button>` +
       `<button id="plateZoomIn">+</button>` +
       `<button id="plateReset">Fit</button>` +
@@ -452,6 +455,11 @@ class MacheteChartsPanel extends TemplateElement {
 
     const img = document.getElementById('plateImg');
     const container = document.getElementById('plateContainer');
+
+    // Apply invert filter if preference is set
+    if (chartInverted) {
+      img.style.filter = 'invert(1) hue-rotate(180deg)';
+    }
 
     // Set src after element is in the DOM
     img.src = imgSrc;
@@ -636,6 +644,14 @@ class MacheteChartsPanel extends TemplateElement {
 
     // Reset/Fit button
     document.getElementById('plateReset').addEventListener('click', fitImage);
+
+    // Invert button
+    document.getElementById('plateInvert').addEventListener('click', function () {
+      chartInverted = !chartInverted;
+      img.style.filter = chartInverted ? 'invert(1) hue-rotate(180deg)' : '';
+      this.classList.toggle('active', chartInverted);
+      try { localStorage.setItem('machete_chart_inverted', chartInverted ? '1' : '0'); } catch(e) {}
+    });
   }
 
   function escapeHtml(str) {

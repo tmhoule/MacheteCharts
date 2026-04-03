@@ -389,6 +389,12 @@ html, body {
   background: #3a8ae8;
 }
 
+.plate-toolbar button#plateInvert.active {
+  background: var(--accent);
+  border-color: transparent;
+  color: #fff;
+}
+
 .plate-container {
   flex: 1;
   overflow: hidden;
