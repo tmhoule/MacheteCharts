@@ -5,7 +5,7 @@
 ; Output: installer/Output/MacheteChartsSetup.exe
 
 #define MyAppName "Machete Charts"
-#define MyAppVersion "1.0.0"
+#define MyAppVersion "1.1.0"
 #define MyAppPublisher "hermes-tv.com"
 #define MyAppURL "https://hermes-tv.com"
 

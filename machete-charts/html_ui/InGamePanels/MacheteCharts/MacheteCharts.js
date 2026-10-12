@@ -26,8 +26,27 @@ class MacheteChartsPanel extends TemplateElement {
   const searchBtn = document.getElementById('searchBtn');
   const searchResults = document.getElementById('searchResults');
   var highlightIdx = -1;
+  // MSFS does not keep Coherent's localStorage between sim sessions, so prefer
+  // the sim's DataStorage (GetStoredData/SetStoredData from dataStorage.js).
+  // localStorage stays as a fallback for browsers / older sims.
+  function loadSetting(key) {
+    try {
+      if (typeof GetStoredData === 'function') {
+        var v = GetStoredData(key);
+        if (v !== null && v !== undefined && v !== '') return String(v);
+      }
+    } catch(e) {}
+    try { return localStorage.getItem(key); } catch(e) {}
+    return null;
+  }
+  function saveSetting(key, value) {
+    value = String(value);
+    try { if (typeof SetStoredData === 'function') SetStoredData(key, value); } catch(e) {}
+    try { localStorage.setItem(key, value); } catch(e) {}
+  }
+
   var recentAirports = [];
-  try { var r = JSON.parse(localStorage.getItem('machete_recent')); if (Array.isArray(r)) recentAirports = r; } catch(e) {}
+  try { var r = JSON.parse(loadSetting('machete_recent')); if (Array.isArray(r)) recentAirports = r; } catch(e) {}
 
   // MSFS Coherent GT: redirect keyboard input to panel when input is focused
   searchInput.addEventListener('focus', function () {
@@ -40,21 +59,23 @@ class MacheteChartsPanel extends TemplateElement {
 
   // ── Text size controls ──
   var uiScale = 100;
-  try { var saved = localStorage.getItem('machete_ui_scale'); if (saved) uiScale = parseInt(saved); } catch(e) {}
-  var chartInverted = false;
-  try { chartInverted = localStorage.getItem('machete_chart_inverted') === '1'; } catch(e) {}
+  var savedScale = parseInt(loadSetting('machete_ui_scale'));
+  if (savedScale >= 60 && savedScale <= 500) uiScale = savedScale;
+  var chartInverted = loadSetting('machete_chart_inverted') === '1';
   var appEl = document.getElementById('app');
   function applyUiScale() {
     appEl.style.fontSize = uiScale + '%';
-    try { localStorage.setItem('machete_ui_scale', uiScale); } catch(e) {}
+    saveSetting('machete_ui_scale', uiScale);
   }
   applyUiScale();
+  // Small steps for fine-tuning on a monitor, big steps above 150% so VR
+  // users reach a readable size in a few clicks.
   document.getElementById('textBigger').addEventListener('click', function () {
-    uiScale = Math.min(300, uiScale + 25);
+    uiScale = Math.min(500, uiScale + (uiScale >= 150 ? 50 : 25));
     applyUiScale();
   });
   document.getElementById('textSmaller').addEventListener('click', function () {
-    uiScale = Math.max(60, uiScale - 25);
+    uiScale = Math.max(60, uiScale - (uiScale > 150 ? 50 : 25));
     applyUiScale();
   });
 
@@ -320,7 +341,7 @@ class MacheteChartsPanel extends TemplateElement {
     recentAirports = recentAirports.filter(function (c) { return c !== code; });
     recentAirports.unshift(code);
     if (recentAirports.length > 5) recentAirports = recentAirports.slice(0, 5);
-    try { localStorage.setItem('machete_recent', JSON.stringify(recentAirports)); } catch(e) {}
+    saveSetting('machete_recent', JSON.stringify(recentAirports));
   }
 
   function showRecent() {
@@ -650,7 +671,7 @@ class MacheteChartsPanel extends TemplateElement {
       chartInverted = !chartInverted;
       img.style.filter = chartInverted ? 'invert(1) hue-rotate(180deg)' : '';
       this.classList.toggle('active', chartInverted);
-      try { localStorage.setItem('machete_chart_inverted', chartInverted ? '1' : '0'); } catch(e) {}
+      saveSetting('machete_chart_inverted', chartInverted ? '1' : '0');
     });
   }
 

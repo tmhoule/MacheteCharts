@@ -18,6 +18,10 @@ jobs:
       - name: Install Inno Setup
         run: choco install innosetup -y --no-progress
 
+      # Windows checkout may convert line endings, so sizes must be measured here
+      - name: Regenerate layout.json
+        run: python installer/make_layout.py
+
       - name: Build installer
         run: iscc installer\MacheteCharts.iss
 
