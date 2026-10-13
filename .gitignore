@@ -1,6 +1,9 @@
 # Server-side chart update pipeline
 scripts/
 
+# Environment variables for chart updates
+.env
+
 # Build tooling (SPB format, PDF parsing)
 build.py
 build_spb.py
