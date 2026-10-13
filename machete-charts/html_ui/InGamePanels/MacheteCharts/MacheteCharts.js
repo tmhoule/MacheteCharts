@@ -97,6 +97,15 @@ class MacheteChartsPanel extends TemplateElement {
       '</div>';
   });
 
+  // ── Close panel button ──
+  // closePanel() is the <ingame-ui> method MSFS uses for its own panel close.
+  var panelSelf = this;
+  document.getElementById('closePanel').addEventListener('click', function () {
+    var ui = panelSelf.ingameUi || document.getElementById('MacheteChartsPanel');
+    try { ui.closePanel(); return; } catch(e) {}
+    ui.classList.add('panelInvisible');
+  });
+
   // ── On-screen keyboard ──
   var osk = document.getElementById('onScreenKeyboard');
   var oskRows = [
