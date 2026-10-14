@@ -113,7 +113,8 @@ ingame-ui icon-button {
   margin-left: 0.44em;
 }
 
-#closePanel:hover {
+#closePanel:hover,
+.plate-toolbar button#plateClose:hover {
   background: #c53030;
   border-color: #c53030;
   color: #fff;

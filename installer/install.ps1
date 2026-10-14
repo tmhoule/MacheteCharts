@@ -120,6 +120,11 @@ Write-Host "  $DestDir" -ForegroundColor White
 Write-Host ""
 
 try {
+    # Remove the old copy first: Copy-Item into an existing folder nests the
+    # package (machete-charts\machete-charts) and leaves the old files in place.
+    if (Test-Path $DestDir) {
+        Remove-Item -Path $DestDir -Recurse -Force
+    }
     Copy-Item -Path $SourceDir -Destination $DestDir -Recurse -Force
     Write-Host "Installation complete!" -ForegroundColor Green
     Write-Host ""

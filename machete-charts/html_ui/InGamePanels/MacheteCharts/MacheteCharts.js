@@ -100,10 +100,11 @@ class MacheteChartsPanel extends TemplateElement {
   // ── Close panel button ──
   // closePanel() is the <ingame-ui> method MSFS uses for its own panel close.
   var panelSelf = this;
-  document.getElementById('closePanel').addEventListener('click', function () {
+  function closeMachetePanel() {
     var ui = panelSelf.ingameUi || document.getElementById('MacheteChartsPanel');
     try { ui.closePanel(); } catch(e) {}
-  });
+  }
+  document.getElementById('closePanel').addEventListener('click', closeMachetePanel);
 
   // ── On-screen keyboard ──
   var osk = document.getElementById('onScreenKeyboard');
@@ -474,6 +475,7 @@ class MacheteChartsPanel extends TemplateElement {
       `<button id="plateZoomOut">-</button>` +
       `<button id="plateZoomIn">+</button>` +
       `<button id="plateReset">Fit</button>` +
+      `<button id="plateClose" title="Close panel">X</button>` +
       `</div>` +
       `<div class="plate-container" id="plateContainer">` +
       `<div id="plateLoading" style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:#ccc;font-size:1.2em;">Loading chart...</div>` +
@@ -673,6 +675,8 @@ class MacheteChartsPanel extends TemplateElement {
 
     // Reset/Fit button
     document.getElementById('plateReset').addEventListener('click', fitImage);
+
+    document.getElementById('plateClose').addEventListener('click', closeMachetePanel);
 
     // Invert button
     document.getElementById('plateInvert').addEventListener('click', function () {
