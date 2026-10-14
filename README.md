@@ -4,9 +4,28 @@ Free airport charts inside Microsoft Flight Simulator. View airport diagrams, in
 
 ![Machete Charts](docs/screenshot.png)
 
+## Why Machete Charts
+
+- **Free** — no subscription, no account, no API key.
+- **Official data** — charts come straight from government AIPs (FAA d-TPP and European eAIPs), not third-party re-draws.
+- **Current** — refreshed every 28-day AIRAC cycle, so procedures match real-world publication.
+- **In the cockpit** — opens as an MSFS toolbar panel; no alt-tabbing or second screen.
+- **VR friendly** — on-screen keyboard support, scalable text, and touch/pinch zoom.
+- **Light on your system** — charts are loaded on demand rather than bundled, so the install stays small.
+- **MSFS 2020 and 2024** — the installer detects every Community folder and installs to all of them.
+
+## What Works
+
+- Search by ICAO/FAA code or airport name with suggestions
+- Four chart categories per airport: diagrams, approaches, departures (SIDs), and STARs
+- Zoom, pan, double-click quick zoom, and Fit to reset
+- Invert button for dark-mode viewing
+- Adjustable text size (up to 300%), saved between sessions
+- Close button in the panel header
+
 ## Supported Charts
 
-Machete Charts gives you access to **3,900+ airports across 17 countries**, sourced from official government Aeronautical Information Publications (AIPs). Charts are updated every 28 days to match the AIRAC cycle.
+Machete Charts gives you access to **3,800+ airports across 21 countries**, sourced from official government Aeronautical Information Publications (AIPs). Charts are updated every 28 days to match the AIRAC cycle.
 
 - **Airport Diagrams** — Taxi layouts
 - **Instrument Approaches** — ILS, RNAV, VOR, LOC, and visual approaches
@@ -17,23 +36,34 @@ Machete Charts gives you access to **3,900+ airports across 17 countries**, sour
 
 | Country | Airports | Source |
 |---------|----------|--------|
-| United States | 3,193 | FAA d-TPP |
+| United States | 3,185 | FAA d-TPP |
 | France | 132 | SIA eAIP |
-| UK | 118 | NATS |
+| UK | 114 | NATS |
 | Spain | 59 | ENAIRE |
 | Germany | 58 | DFS BasicIFR |
 | Norway | 52 | Avinor |
-| Belgium | 50 | skeyes |
 | Sweden | 45 | LFV |
-| Denmark | 27 | Naviair |
+| Thailand | 42 | CAAT |
+| Denmark | 28 | Naviair |
 | Finland | 24 | ANS Finland |
 | Austria | 21 | Austro Control |
 | Portugal | 19 | NAV Portugal |
 | Netherlands | 17 | LVNL |
+| Poland | 15 | PANSA |
 | Iceland | 14 | Isavia |
-| Poland | 13 | PANSA |
 | Czech Republic | 11 | ANS CR |
 | Ireland | 9 | AirNav Ireland |
+| Estonia | 8 | EANS |
+| Hungary | 8 | HungaroControl |
+| Belgium | 7 | skeyes |
+| Singapore | 4 | CAAS |
+| Hong Kong | 2 | CAD |
+
+Airport counts are the airports that have published charts in each country's current AIP.
+
+### Not Yet Available
+
+- **Italy** — ENAV requires a registered login; the scraper is not implemented yet.
 
 ## Install
 
