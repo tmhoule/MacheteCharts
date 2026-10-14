@@ -98,12 +98,9 @@ class MacheteChartsPanel extends TemplateElement {
   });
 
   // ── Close panel button ──
-  // Close through the sim's toolbar state (false = closed) so the toolbar
-  // icon and the panel stay in sync. ingameUi.closePanel() only closed the
-  // panel the first time; after reopening from the toolbar it did nothing.
+  // closePanel() is the <ingame-ui> method MSFS uses for its own panel close.
   var panelSelf = this;
   document.getElementById('closePanel').addEventListener('click', function () {
-    try { Coherent.call('TOOLBAR_BUTTON_TOGGLE', 'MACHETE_CHARTS_PANEL', false); return; } catch(e) {}
     var ui = panelSelf.ingameUi || document.getElementById('MacheteChartsPanel');
     try { ui.closePanel(); } catch(e) {}
   });

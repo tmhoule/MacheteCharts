@@ -39,6 +39,13 @@ html, body {
   -webkit-font-smoothing: antialiased;
 }
 
+/* MSFS draws its frame buttons (minimize / pop-out / close) as icon-button
+   elements over the top-right of the panel content. #app is positioned and
+   comes later in the DOM, so without this it paints over them. */
+ingame-ui icon-button {
+  z-index: 100;
+}
+
 /* JS sets #app font-size as a percentage (e.g. 100%, 130%).
    All child sizes use em so everything scales together. */
 #app {
