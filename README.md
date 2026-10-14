@@ -25,7 +25,7 @@ Free airport charts inside Microsoft Flight Simulator. View airport diagrams, in
 
 ## Supported Charts
 
-Machete Charts gives you access to **3,800+ airports across 21 countries**, sourced from official government Aeronautical Information Publications (AIPs). Charts are updated every 28 days to match the AIRAC cycle.
+Machete Charts gives you access to **3,870+ airports across 21 countries**, sourced from official government Aeronautical Information Publications (AIPs). Charts are updated every 28 days to match the AIRAC cycle.
 
 - **Airport Diagrams** — Taxi layouts
 - **Instrument Approaches** — ILS, RNAV, VOR, LOC, and visual approaches
@@ -51,11 +51,11 @@ Machete Charts gives you access to **3,800+ airports across 21 countries**, sour
 | Netherlands | 17 | LVNL |
 | Poland | 15 | PANSA |
 | Iceland | 14 | Isavia |
+| Belgium | 12 | skeyes |
 | Czech Republic | 11 | ANS CR |
 | Ireland | 9 | AirNav Ireland |
 | Estonia | 8 | EANS |
 | Hungary | 8 | HungaroControl |
-| Belgium | 7 | skeyes |
 | Singapore | 4 | CAAS |
 | Hong Kong | 2 | CAD |
 
